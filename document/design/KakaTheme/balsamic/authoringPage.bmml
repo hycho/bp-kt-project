@@ -1,0 +1,77 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="733" measuredH="663" mockupW="690" mockupH="644">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="43" y="19" w="690" h="644" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Authoring%20Window</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::ComboBox" x="133" y="65" w="118" h="-1" measuredW="78" measuredH="23" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>closed</state>
+        <text>General%0AMainTab%0AChatRoom%0AMediaPopup%0AChatList%0AFriendList%0AMiniProfile%0ABootFreind%0ASetup%0ALookView%0AOther</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::FieldSet" x="65" y="139" w="280" h="447" measuredW="200" measuredH="170" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Setting</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Image" x="461" y="65" w="248" h="521" measuredW="195" measuredH="381" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>./assets/kakatoc.PNG</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Label" x="65" y="65" w="-1" h="-1" measuredW="61" measuredH="21" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Category</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Label" x="84" y="103" w="-1" h="-1" measuredW="34" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Item</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::ComboBox" x="133" y="102" w="118" h="-1" measuredW="113" measuredH="23" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>closed</state>
+        <text>Theme%20Name%0ASplash%20Image%0ASplash%20Thumbnail%0AList%20Item%20Font%20Color</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="84" y="168" w="-1" h="-1" measuredW="95" measuredH="21" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Theme%20Name%20%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::TextInput" x="179" y="165" w="151" h="-1" measuredW="103" measuredH="27" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>My%20First%20Theme</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Paragraph" x="179" y="204" w="151" h="35" measuredW="200" measuredH="80" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>13369344</color>
+        <size>10</size>
+        <text>*Notice%0ATheme%20MaxSize%2020</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Canvas" x="547" y="435" w="88" h="47" measuredW="100" measuredH="70" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0</backgroundAlpha>
+        <borderColor>13369344</borderColor>
+        <borderStyle>roundedDotted</borderStyle>
+        <color>2848996</color>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Button" x="655" y="604" w="-1" h="-1" measuredW="54" measuredH="27" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>close</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Button" x="587" y="604" w="-1" h="-1" measuredW="53" measuredH="27" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>apply</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
