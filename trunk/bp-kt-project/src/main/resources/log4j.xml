@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.bpkt.myapp">
+	<logger name="kr.co.kakaotheme.spring.*">
 		<level value="info" />
 	</logger>
 	
