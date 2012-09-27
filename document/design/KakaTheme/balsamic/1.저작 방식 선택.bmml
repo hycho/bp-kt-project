@@ -1,0 +1,63 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1186" measuredH="764" mockupW="1155" mockupH="751">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="31" y="13" w="1155" h="751" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%uCE74%uCE74%uC624%uD1A1%20%uD14C%uB9C8%20%uC800%uC791%uB3C4%uAD6C%0Ahttp%3A//kakaotalkTheme.co.kr</text>
+      </controlProperties>
+    </control>
+    <control controlID="17" controlTypeID="__group__" x="321" y="205" w="559" h="329" measuredW="559" measuredH="329" zOrder="1" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="0" y="0" w="559" h="329" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="17">
+          <controlProperties>
+            <text>%uC800%uC791%20%uBC29%uC2DD%20%uC120%uD0DD</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Button" x="429" y="269" w="-1" h="-1" measuredW="50" measuredH="27" zOrder="1" locked="false" isInGroup="17">
+          <controlProperties>
+            <text>%uD655%uC778</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Button" x="494" y="269" w="-1" h="-1" measuredW="50" measuredH="27" zOrder="2" locked="false" isInGroup="17">
+          <controlProperties>
+            <text>%uCDE8%uC18C</text>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::FieldSet" x="15" y="41" w="251" h="213" measuredW="200" measuredH="170" zOrder="3" locked="false" isInGroup="17">
+          <controlProperties>
+            <text>%uC800%uC791%uBC29%uC2DD</text>
+          </controlProperties>
+        </control>
+        <control controlID="4" controlTypeID="com.balsamiq.mockups::RadioButton" x="44" y="68" w="134" h="23" measuredW="121" measuredH="23" zOrder="4" locked="false" isInGroup="17">
+          <controlProperties>
+            <state>selected</state>
+            <text>%uC704%uC790%uB4DC%20%uC800%uC791%20%uBC29%uC2DD</text>
+          </controlProperties>
+        </control>
+        <control controlID="5" controlTypeID="com.balsamiq.mockups::RadioButton" x="44" y="97" w="108" h="23" measuredW="108" measuredH="23" zOrder="5" locked="false" isInGroup="17">
+          <controlProperties>
+            <text>%uC0C1%uC138%20%uC800%uC791%20%uBC29%uC2DD</text>
+          </controlProperties>
+        </control>
+        <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="44" y="135" w="189" h="45" measuredW="265" measuredH="16" zOrder="6" locked="false" isInGroup="17">
+          <controlProperties>
+            <color>13369344</color>
+            <size>8</size>
+            <text>*%20%uC704%uC790%uB4DC%20%uC800%uC791%20%uBC29%uC2DD%uC740%20%uBE60%uB974%uAC8C%20%uB2E8%uACC4%uBCC4%20%uD14C%uB9C8%uB97C%20%uC791%uC131%20%uD560%20%uC218%20%uC788%uB3C4%uB85D%20%uB3C4%uC640%uC90D%uB2C8%uB2E4.</text>
+          </controlProperties>
+        </control>
+        <control controlID="7" controlTypeID="com.balsamiq.mockups::FieldSet" x="293" y="41" w="251" h="213" measuredW="200" measuredH="170" zOrder="7" locked="false" isInGroup="17">
+          <controlProperties>
+            <text>%uC800%uC791%20%uB3D9%uC601%uC0C1</text>
+          </controlProperties>
+        </control>
+        <control controlID="8" controlTypeID="com.balsamiq.mockups::VideoPlayer" x="307" y="61" w="222" h="172" measuredW="300" measuredH="200" zOrder="8" locked="false" isInGroup="17"/>
+        <control controlID="9" controlTypeID="com.balsamiq.mockups::Image" x="307" y="62" w="218" h="133" measuredW="642" measuredH="361" zOrder="9" locked="false" isInGroup="17">
+          <controlProperties>
+            <src>./assets/%25ec%25a0%2580%25ec%259e%2591%25eb%25b0%25a9%25ec%258b%259d%2520%25ec%2584%25a4%25eb%25aa%2585%2520%25eb%258f%2599%25ec%2598%2581%25ec%2583%2581.PNG</src>
+            <text/>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+  </controls>
+</mockup>
