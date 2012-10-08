@@ -1,7 +1,5 @@
 package co.kr.kakaotheme.controller;
 
-import java.util.Locale;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,11 +25,7 @@ public class UserController {
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String getLogin(@RequestParam("userid") String userid, @RequestParam("userpassword") String userpassword, Model model) {
-		
-		logger.info("login id = "+userid);
-		logger.info("login id = "+userpassword);
-		
-		User user = this.userService.getUserInfo(userid, userpassword);
+		User user = userService.getUserInfo(userid, userpassword);
 		
 		model.addAttribute("userid", user.getUserId());
 		model.addAttribute("username", user.getUserName());
