@@ -42,7 +42,7 @@
   <div class="about">
    <h2>저작이란?</h2>
    <h3>쉽고 빠른 카카오톡 저작도구</h3>
-   <p><span>퍼큐먹어 두번먹어</span></p>
+   <p><span>테스트</span></p>
    <div class="date">
     <div class="left">Saturday, April 26, 2008&nbsp;&nbsp;|</div>
     <div class="right"><a href="#">Read More</a></div>

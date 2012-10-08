@@ -1,6 +1,9 @@
 package co.kr.kakaotheme.domain;
 
+import javax.persistence.Column;
+
 public class User {
+	private Long id;
 	private String userId;
 	private String userPassword;
 	private String userName;
@@ -16,6 +19,14 @@ public class User {
 		this.userPassword = userPassword;
 		this.userName = userName;
 		this.userEmail = userEmail;
+	}
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getUserId() {
