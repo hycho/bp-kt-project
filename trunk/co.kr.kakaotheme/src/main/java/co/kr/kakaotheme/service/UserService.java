@@ -4,4 +4,5 @@ import co.kr.kakaotheme.domain.User;
 
 public interface UserService {
 	public User getUserInfo(String userId, String userPassword);
+	public void saveUser(User user);
 }

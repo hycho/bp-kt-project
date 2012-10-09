@@ -8,9 +8,6 @@
 <title>KaKao Theme Sample</title>
 </head>
 <body>
-	${userid}
-	${username}
-	${useremail}
-	${userinfo.userName}
+	성공
 </body>
 </html>

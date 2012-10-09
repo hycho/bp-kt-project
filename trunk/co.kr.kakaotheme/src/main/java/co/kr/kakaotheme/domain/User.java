@@ -1,12 +1,31 @@
 package co.kr.kakaotheme.domain;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+
+@Entity
+@Table(name="TB_USER")
 public class User {
+	@Id
+	@Column(name = "SID")
+	//@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	
+	@Column(name = "USERID")
 	private String userId;
+	
+	@Column(name = "USERPASSWORD")
 	private String userPassword;
+	
+	@Column(name = "USERNAME")
 	private String userName;
+	
+	@Column(name = "USEREMAIL")
 	private String userEmail;
 
 	public User() {
