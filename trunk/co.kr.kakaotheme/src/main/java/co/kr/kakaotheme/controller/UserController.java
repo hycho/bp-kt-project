@@ -1,5 +1,7 @@
 package co.kr.kakaotheme.controller;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,6 +61,17 @@ public class UserController {
 		userService.saveUser(user2);
 		//userService.saveUser(user3);
 		
+		return "sample/sample";
+	}
+	
+	@RequestMapping(value = "/allUsers", method = RequestMethod.GET)
+	public String findAllUsers(){
+		List<User> ul = userService.findAllUsers();
+		for(User u : ul){
+			System.out.println(u.getUserId());
+			System.out.println(u.getUserEmail());
+			System.out.println(u.getUserPassword());
+		}
 		return "sample/sample";
 	}
 }
