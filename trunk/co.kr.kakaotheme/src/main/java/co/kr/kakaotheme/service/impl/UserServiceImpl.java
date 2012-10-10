@@ -20,8 +20,7 @@ public class UserServiceImpl implements UserService{
 	}
 	
 	public User getUserInfo(String userId, String userPassword) {
-//		userRepository.findAll();
-		userRepository.findAllUser();
+		userRepository.findAll();
 		return null;
 	}
 	
