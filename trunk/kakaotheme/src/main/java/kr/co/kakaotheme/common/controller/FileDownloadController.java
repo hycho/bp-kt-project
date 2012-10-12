@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 
 /**
  * 파일 다운로드를 위한 컨트롤러 클래스
+ * @Class FileDownloadController.java
  * @author 김세중 sejoung@gmail.com
  * @since 2012.10.12
  * @version 1.0
