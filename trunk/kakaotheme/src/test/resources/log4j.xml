@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="co.kr.kakaotheme">
+	<logger name="kr.co.kakaotheme">
 		<level value="info" />
 	</logger>
 	
