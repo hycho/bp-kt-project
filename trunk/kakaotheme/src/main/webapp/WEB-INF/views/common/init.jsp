@@ -4,8 +4,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/xml" prefix="x" %>
 
-<%@ page contentType="text/html; charset=UTF-8" %>
-
 <%@ page import="java.io.Serializable" %>
 
 <%@ page import="java.text.DateFormat" %>
