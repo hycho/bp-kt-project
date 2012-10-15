@@ -4,10 +4,55 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title><spring:message code="title"/></title>
-
 <link href="resources/css/styles.css" rel="stylesheet" type="text/css" />
 <link rel="icon" href="resources/images/icon.ico" />
 
+<script src="resources/js/jquery-1.8.2.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){	
+	  aEvent();
+	});
+	
+	var aEvent = function(){
+		$.each($("body").find("a"), function(){
+			var action = null;
+			switch($(this).attr("href")){
+				case "#newAuthoring":
+					action = newAuthoring;
+					break;
+				default:
+					break;
+			}
+			if(action != null && action !== ""){
+				$(this).click(function(){
+					action();
+				});
+			}
+		});
+	};
+	
+	var newAuthoring = function(){
+		openLayer("layer1");
+	};
+	
+	var openLayer = function(id){
+		$(".layer").fadeIn();
+		
+		var temp = $('#' + id);
+		if(temp.outerHeight() < $(document).height()){
+			temp.css('margin-top', '-'+temp.outerHeight()/2+'px');
+		}else{
+			temp.css('top', '0px');
+		}
+		
+		if(temp.outerWidth() < $(document).width()){
+			temp.css('margin-left', '-'+temp.outerWidth()/2+'px');
+		}else{
+			temp.css('left', '0px');
+		}
+	};
+	
+</script> 
 </head>
 <body>
 <div id="mainWrap">
@@ -27,6 +72,21 @@
 				<li><a href="#"><span>연락처</span></a></li>
 		  	</ul>
 		</div>
+		<div id="logoWrap"><h1>카카오테마</h1></div>
+		<div id="loginPanel">
+		  	<h2>조호영님 어서오세요.</h2>
+		  	<p>쪽지 : <a href="#">15통</a></p>
+		 	<p>
+		 		<a href="#newAuthoring" class="login">새로저작</a>
+		 		<span class="blank2"></span>
+		 		<a href="#" class="login">테마목록</a>
+		 	</p>
+		</div>
+	</div>
+</div>
+<div id="layer" class="layer">
+	<div class="bg"></div>
+	<div class="layer_area" id="layer1" style="width:1400px; height:768px;">
 	</div>
 </div>
 </body>

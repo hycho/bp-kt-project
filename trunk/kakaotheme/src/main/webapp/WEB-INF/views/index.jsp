@@ -6,27 +6,58 @@
 <title>KaKao Theme</title>
 <link href="resources/css/styles.css" rel="stylesheet" type="text/css" />
 <link rel="icon" href="resources/images/icon.ico" />
-<script>
+
+<script src="resources/js/jquery-1.8.2.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){	
+	  goTopMenuPage();
+	});
 	
+	var goTopMenuPage = function(){
+		$.each($("#menu").find("a"), function(){
+			var action = "";
+			switch($(this).attr("href")){
+				case "#goAuthoring":
+					action = "authoring";
+					break;
+				default:
+					break;
+			}
+			
+			if(action != null && action !== ""){
+				$(this).click(function(){
+					goPage(action);
+				});
+			}
+		});
+	};
+	
+	var goPage = function(action){
+		$("#goPage").attr("action",action).submit();
+	}
 </script> 
 </head>
 
 <body>
+<form id="goPage" action="authoring">
+  <input type="hidden" value="Hello there" />
+  <input type="hidden" value="Go" />
+</form>
 <div id="mainWrap">
 <div id="mainPanel">
  <div id="menu">
   <ul>
-   <li><a href="#"><span>홈</span></a></li>
+   <li><a href="#goHome"><span>홈</span></a></li>
    <li><div class="blank"></div></li>
-   <li><a href="#"><span>저작도구</span></a></li>
+   <li><a href="#goAuthoring"><span>저작도구</span></a></li>
    <li><div class="blank"></div></li>
-   <li><a href="#"><span>지원</span></a></li>
+   <li><a href="#goSupport"><span>지원</span></a></li>
    <li><div class="blank"></div></li>
-   <li><a href="#"><span>포럼</span></a></li>
+   <li><a href="#goForum"><span>포럼</span></a></li>
    <li><div class="blank"></div></li>
-   <li><a href="#"><span>개발자이야기</span></a></li>
+   <li><a href="#goStory"><span>개발자이야기</span></a></li>
    <li><div class="blank"></div></li>
-   <li><a href="#"><span>연락처</span></a></li>
+   <li><a href="#goTel"><span>연락처</span></a></li>
   </ul>
  </div>
   <div id="logoWrap"><h1>카카오테마</h1></div>
