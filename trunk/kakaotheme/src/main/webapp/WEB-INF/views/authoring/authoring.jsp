@@ -15,7 +15,6 @@
 	$(document).ready(function(){	
 	  aEvent();
 	  $( "#tabs" ).tabs();
-	  
 	});
 	
 	var aEvent = function(){
@@ -33,6 +32,11 @@
 					action();
 				});
 			}
+		});
+		
+		// Layer 흐릿한 백그라운드를 클릭하면 Layer를 삭제 하도록 해놓음.
+		$("#layer").find(".bg").click(function(){
+			$("#layer").fadeOut();
 		});
 	};
 	
@@ -56,10 +60,7 @@
 			temp.css("left", "0px");
 		}
 		
-		
 		$("#tabs div.ui-tabs-panel").css("height", parseInt(temp.css("height"))-parseInt($("#tabs ul.ui-tabs-nav").css("height"))-(parseInt($("#tabs").parent().css("padding-top")) * 3));
-		
-		
 	};
 	
 </script> 
@@ -96,7 +97,7 @@
 </div>
 <div id="layer" class="layer">
 	<div class="bg"></div>
-	<div class="layer_area" id="layer1" style="width:1400px; height:768px;">
+	<div class="layer_area" id="layer1" style="width:1000px; height:600px;">
 		<div id="tabs">
 			<ul>
 				<li><a href="#tabs-1">1단계: 기본</a></li>
