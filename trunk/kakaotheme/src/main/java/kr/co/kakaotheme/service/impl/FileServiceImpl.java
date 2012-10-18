@@ -11,7 +11,7 @@ public class FileServiceImpl implements FileService {
 	private FileRepository filerepository;
 	
 	@Autowired
-	public void setUserRepository(FileRepository filerepository) {
+	public void setFileRepository(FileRepository filerepository) {
 		this.filerepository = filerepository;
 	}
 	
