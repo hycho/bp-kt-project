@@ -11,9 +11,7 @@
 </head>
 <body>
 	<message:message code="sample" />
-	</br>
 	<message:message code="name" />
-	</br>
 	<message:message code="hello" />
 	하하호호
 </body>
