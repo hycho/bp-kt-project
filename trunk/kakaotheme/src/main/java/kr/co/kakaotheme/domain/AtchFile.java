@@ -13,7 +13,7 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 
 /**
  * 파일 테이블 클래스
- * @Class Name : File.java
+ * @Class Name : ATCHFile.java
  * @author 김세중 sejoung@gmail.com
  * @since 2012.10.12
  * @version 1.0
@@ -32,7 +32,7 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 
 @Entity
 @Table(name="TB_ATCHFILE")
-public class File {
+public class AtchFile {
 	
 	/**
      * 첨부파일 아이디
