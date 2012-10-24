@@ -10,9 +10,8 @@ import javax.persistence.Table;
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
-
 /**
- * 파일 테이블 클래스
+ * 첨부 파일 테이블 클래스
  * @Class Name : AtchFile.java
  * @author 김세중 sejoung@gmail.com
  * @since 2012.10.12
@@ -38,7 +37,7 @@ public class AtchFile extends AbstractPersistable<Long> {
      * 첨부파일 아이디
      */
 	@Column(name = "ATCHFILEID", nullable = false)
-    public Long atchFileId;
+    public String atchFileId;
     
 	/**
      * 생성일자
@@ -84,7 +83,7 @@ public class AtchFile extends AbstractPersistable<Long> {
      * atchFileId attribute를 리턴한다.
      * @return the atchFileId
 	 */
-	public Long getAtchFileId() {
+	public String getAtchFileId() {
 		return atchFileId;
 	}
 
@@ -93,7 +92,7 @@ public class AtchFile extends AbstractPersistable<Long> {
      * @param atchFileId
      *            the atchFileId to set
      */
-	public void setAtchFileId(Long atchFileId) {
+	public void setAtchFileId(String atchFileId) {
 		this.atchFileId = atchFileId;
 	}
 
