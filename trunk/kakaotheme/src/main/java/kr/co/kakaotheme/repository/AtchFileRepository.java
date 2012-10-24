@@ -1,14 +1,12 @@
 package kr.co.kakaotheme.repository;
 
-import java.util.List;
+import java.util.ArrayList;
 
 import kr.co.kakaotheme.domain.AtchFile;
 
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface AtchFileRepository extends CrudRepository<AtchFile, Long>{
-
-	@Query("FROM TB_ATCHFILE")
-	List<AtchFile> findAllUser();
+public interface AtchFileRepository extends JpaRepository<AtchFile, Long>{
+	ArrayList<AtchFile> findAll();
+	
 }

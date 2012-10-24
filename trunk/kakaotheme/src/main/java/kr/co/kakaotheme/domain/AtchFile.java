@@ -5,20 +5,18 @@ import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.apache.commons.lang.builder.ToStringBuilder;
+import org.springframework.data.jpa.domain.AbstractPersistable;
 
 
 /**
  * 파일 테이블 클래스
- * @Class Name : ATCHFile.java
+ * @Class Name : AtchFile.java
  * @author 김세중 sejoung@gmail.com
  * @since 2012.10.12
  * @version 1.0
- * @see
- *
  * <pre>
  * << 개정이력(Modification Information) >>
  *   
@@ -32,13 +30,14 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 
 @Entity
 @Table(name="TB_ATCHFILE")
-public class AtchFile {
-	
+public class AtchFile extends AbstractPersistable<Long> {
+
+	private static final long serialVersionUID = 5527525182726172008L;
+
 	/**
      * 첨부파일 아이디
      */
-	@Id
-	@Column(name = "ATCHFILEID")
+	@Column(name = "ATCHFILEID", nullable = false)
     public Long atchFileId;
     
 	/**
@@ -46,7 +45,11 @@ public class AtchFile {
      */
 	@Column(name = "CREATE_DATE")
     public Date creatDt;
-
+	/**
+     * 수정일자
+     */
+	@Column(name = "UPDATE_DATE")
+	public Date updateDt;
 	/**
      * 파일확장자
      */
@@ -56,25 +59,25 @@ public class AtchFile {
 	/**
      * 파일크기
      */
-	@Column(name = "FILESIZE")
+	@Column(name = "FILESIZE", nullable = false)
     public String fileSize;
    
     /**
      * 파일저장경로
      */
-	@Column(name = "FILESTRECOURS")
+	@Column(name = "FILESTRECOURS", nullable = false)
     public String fileStreCours;
     
     /**
      * 원파일명
      */
-	@Column(name = "ORIGNLFILENM")
+	@Column(name = "ORIGNLFILENM", nullable = false)
     public String orignlFileNm;
     
     /**
      * 저장파일명
      */
-	@Column(name = "STREFILENM")
+	@Column(name = "STREFILENM", nullable = false)
     public String streFileNm;
 
 	/**
@@ -111,6 +114,25 @@ public class AtchFile {
      */
 	public void setCreatDt(Date creatDt) {
 		this.creatDt = creatDt;
+	}
+	
+	/**
+     * updateDt attribute를 리턴한다.
+     * 
+     * @return the updateDt
+     */	
+	public Date getUpdateDt() {
+		return updateDt;
+	}
+	
+	/**
+     * updateDt attribute 값을 설정한다.
+     * 
+     * @param updateDt
+     *            the updateDt to set
+     */
+	public void setUpdateDt(Date updateDt) {
+		this.updateDt = updateDt;
 	}
 	
     /**
