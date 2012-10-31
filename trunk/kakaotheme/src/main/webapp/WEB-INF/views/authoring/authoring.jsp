@@ -105,7 +105,11 @@
 				<li><a href="#tabs-3">3단계: 보색</a></li>
 				<li><a href="#tabs-4">4단계: 완료</a></li>
 			</ul>
-			<div id="tabs-1"></div>
+			<div id="tabs-1">
+				 <h3>1단계 : 기본 설정</h3>
+				 <p>테마 이름과 테마 어플리케이션 이름을 입력합니다.</p>
+				 <p>카카오톡의 테마 설정 화면에서 보여지는 이름이며 원하시는 이름을 입력해 주시기 바랍니다. </p>
+			</div>
 			<div id="tabs-2"></div>
 			<div id="tabs-3"></div>
 			<div id="tabs-4"></div>
