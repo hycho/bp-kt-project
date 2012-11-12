@@ -32,4 +32,9 @@ public class AuthoringController {
 	public String viewAuthroing(){
 		return "authoring/authoring";
 	}
+	
+	@RequestMapping(value = "/authoringlist")
+	public String viewAuthoringList(){
+		return "authoring/authoringList";
+	}
 }

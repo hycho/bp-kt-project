@@ -11,10 +11,10 @@
 <script src="resources/js/jquery-1.8.2.js"></script>
 <script src="resources/apps/jquery-ui-1.9.0.custom/js/jquery-ui-1.9.0.custom.js"></script>
 <script type="text/javascript">
-
 	$(document).ready(function(){	
 	  aEvent();
 	  $( "#tabs" ).tabs();
+	  settingGridster();
 	});
 	
 	var aEvent = function(){
@@ -62,7 +62,6 @@
 		
 		$("#tabs div.ui-tabs-panel").css("height", parseInt(temp.css("height"))-parseInt($("#tabs ul.ui-tabs-nav").css("height"))-(parseInt($("#tabs").parent().css("padding-top")) * 3));
 	};
-	
 </script> 
 </head>
 <body>
@@ -109,10 +108,30 @@
 				 <h3>1단계 : 기본 설정</h3>
 				 <p>테마 이름과 테마 어플리케이션 이름을 입력합니다.</p>
 				 <p>카카오톡의 테마 설정 화면에서 보여지는 이름이며 원하시는 이름을 입력해 주시기 바랍니다. </p>
+				 <p>테마 이름 : <input type="text" id="themeName" name="themeName" value=""/></p>
+				 <p>어플 이름 : <input type="text" id="appName" name="appName" value=""/></p>
 			</div>
-			<div id="tabs-2"></div>
-			<div id="tabs-3"></div>
-			<div id="tabs-4"></div>
+			<div id="tabs-2">
+				<h3>2단계 : 테마 설정</h3>
+				<p>초기 테마 설정을 해주십시요</p>
+				<p>테마는 차후 수정이 가능 합니다. </p>
+				<p>테마 검색 : <input type="text" id="appName" name="appName" value=""/> <button>검색</button> </p>
+				<div class="fieldset" style="height:150px;">Theme Sample</div>
+				<p class="redlabel">※ 위는 적용할 테마입니다.</p>
+				<div class="fieldset" style="height:150px;">Theme Sample</div>
+				<p class="redlabel">※ 선택된 테마가 적용이 된 화면입니다.</p>
+			</div>
+			<div id="tabs-3">
+				<h3>3단계 : 보색 설정</h3>
+				<p>보색 설정을 해주십시요</p>
+				<p>보색은 차후 수정이 가능 합니다. </p>
+				<p>보색 검색 : <input type="text" id="appName" name="appName" value=""/> <button>검색</button> </p>
+				<div class="fieldset" style="width:250px; height:380px;">Theme Sample</div>
+			</div>
+			<div id="tabs-4">
+				<h3>4단계 : 완료 설정</h3>
+				<div class="fieldset" style="height:460px;">Theme Sample</div>
+			</div>
 		</div>
 	</div>
 </div>
