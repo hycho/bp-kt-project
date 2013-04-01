@@ -14,7 +14,7 @@
 <script src="<c:url value='/script/kakaotheme/menu.js'/>"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
-		eventMenu($("#menu"), $("#goPage"));
+		eventMenu($(".menu"), $("#goPage"));
 	});
 </script>
 </head>
