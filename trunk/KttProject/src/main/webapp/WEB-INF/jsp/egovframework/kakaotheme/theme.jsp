@@ -8,12 +8,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>KaKao Theme</title>
+<link type="text/css" rel="stylesheet" href="<c:url value='/css/egovframework/kakaotheme/base.css'/>"/>
 <link type="text/css" rel="stylesheet" href="<c:url value='/css/egovframework/kakaotheme/styles.css'/>"/>
 <link rel="stylesheet" href="<c:url value='/images/egovframework/kakaotheme/icon.ico'/>"/>
 <script src="<c:url value='/script/jquery-1.8.2.js'/>"></script>
 <script src="<c:url value='/script/kakaotheme/menu.js'/>"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
+		// call to menu.js
 		eventMenu($(".menu"), $("#goPage"));
 	});
 </script>
@@ -59,102 +61,22 @@
 				<a href="login?userid=hycho&userpassword=hycho" class="login">Login</a>
 			</div>
 			<div class="quots">
-				<p>"누구나 자신만의 카카오톡 테마를 저작할 수 있도록 하고 싶었습니다."</p>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
 			</div>
-			<div class="leftPanel">
-				<div class="about">
-					<h2>저작이란?</h2>
-					<h3>쉽고 빠른 카카오톡 저작도구</h3>
-					<p>
-						<span>테스트</span>
-					</p>
-					<div class="date">
-						<div class="left">Saturday, April 26, 2008&nbsp;&nbsp;|</div>
-						<div class="right">
-							<a href="#">Read More</a>
-						</div>
-					</div>
-				</div>
-				<div class="services">
-					<h2>Our Spectrum of Services</h2>
-					<div class="pic">
-						<a href="#">Cras turpis duis at sapien eget nulla vulputate. </a>
-					</div>
-					<p>
-						<span>Donec accumsan porta risus.</span> Vestibulum
-						sollicitudinlibero ut semper commodo, purus enim sollicitudin
-						nulla, dictum vehicula diam lacus at purus. In egestas.
-					</p>
-					<h3>Services</h3>
-					<ul>
-						<li><a href="#">Nam congue quam non augue ivamus
-								porttitor</a></li>
-						<li><a href="#" class="bottom">Jam aongue buam n augue
-								famus</a></li>
-					</ul>
-					<p>
-						<span>Pellentesque dolor.</span> Nunc congue est in ante mattis
-						ultrices. liquam erat volutpat. Nam congue quam non augue.
-					</p>
-				</div>
-				<div class="testimonial">
-					<h2>Testimonial</h2>
-					<p>
-						<span>Nullam vel justo. Mauris viverra mattis neque.</span>
-						Phasellus feugiat pede ut mauris uis orcies tibulum eleifend.
-						Donec est purusiaculis acauctorNullam vel justo. Mauris viverra
-						mattis neque. Phasellus feugiat pede ut mauris. Duis orci.
-					</p>
-					<h3>
-						<span>by</span> David Jackson
-					</h3>
-					<p>
-						<span>Vel justo. Mauris viverra mattis neque asellus
-							feugiat pede ut mauris uis orcies tibulum</span> eleifend. Donec est
-						purusiaculis acauctorNullam vel justo. Mauris viverra mattis
-						neque. Phasellus feugiat pede ut mauris.
-					</p>
-					<h3>
-						<span>by</span> Tom Sam
-					</h3>
-				</div>
-			</div>
-			<div class="rightPanel">
-				<h2>베스트 테마</h2>
-				<div class="pic1"></div>
-				<a href="#" class="view">view large</a>
-				<div class="pic2"></div>
-				<a href="#" class="view">view large</a>
-				<div class="pic3"></div>
-				<a href="#" class="view">view large</a>
-				<div class="contacts">
-					<h2>Quick Contact</h2>
-					<p>Name</p>
-					<input name="name" type="text" value="- enter your name -"
-						onfocus="if(this.value=='- enter your name -')this.value=''"
-						onblur="if(this.value=='')this.value='- enter your name -'" />
-					<p>Email</p>
-					<input name="name" type="text" value="- enter your email -"
-						onfocus="if(this.value=='- enter your email -')this.value=''"
-						onblur="if(this.value=='')this.value='- enter your email -'" />
-					<div class="blank2"></div>
-					<a href="#">Need a Quote?</a>
-					<div class="blank"></div>
-					<a href="#">Submit</a>
-				</div>
-				<div class="project">
-					<h2>Projects Link</h2>
-					<ul>
-						<li><a href="#">Lorem ipsum dolor sit amet eros consequat
-						</a></li>
-						<li><a href="#">Consectetuer adipiscing elit</a></li>
-						<li><a href="#">Etiam quis est ut diam viverra rhoncus</a></li>
-						<li><a href="#">Fusce eros consequat </a></li>
-						<li><a href="#">Cras eros massa blandit </a></li>
-						<li><a href="#" class="bottom">Aoreet utdiam viverra</a></li>
-					</ul>
-				</div>
-			</div>
+			<div class="cb"></div>
+			<article class="gallery_list_type">
+   				<div class="gallery_list_type_left">
+   					<a href="#" class="images_thumbnail_120_80"><img src="./images/ubion/no-image-120.gif"></a><br>
+   				</div>
+				<dl class="gallery_list_type_center">
+					<dt><a href="#">JAVA 기본 문법 정복</a></dt>
+					<dd class="dd_info ell"><span>학습내용</span>JAVA 프로그래밍의 가장 기초가 되는 기본문법에 대해 학습합니다. 뒤에 나오는 내용들은 자동 줄임.</dd>
+					<dd class="star_count">평점 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;리뷰 <span class="review_count">121</span></dd>
+					<dd class="sub_info">저작자 <span class="info_creator">홍길동</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;등록일 <span class="info_createddate">2012.12.12</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;분류 <span class="info_category">JAVA</span></dd>
+				</dl>
+				<div class="cb"></div>
+			</article>
 			<div class="footPanel">
 				<div class="nav">
 					<ul>

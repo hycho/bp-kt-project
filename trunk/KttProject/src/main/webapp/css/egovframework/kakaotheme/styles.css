@@ -1,3 +1,5 @@
+.cb	{clear:both}
+.ell	{display:block; text-overflow: ellipsis; overflow: hidden;white-space:nowrap;}
 body{margin:0px; padding:0px; background:#fffde4 url(../../../images/egovframework/kakaotheme/bodyBg.jpg) repeat-x}
 .mainWrap{width:100%; margin:0px; padding:0px; float:left; background:url(../../../images/egovframework/kakaotheme/headBg.jpg) no-repeat}
 .mainPanel{width:990px; margin:0px; padding:0px; float:left}
@@ -13,6 +15,20 @@ h1{width:223px; height:48px; margin:20px 0 0 0; padding:0 110px; float:right; li
 .loginPanel .login{width:66px; height:20px; margin:10px 0 0 0; padding:0px; float:left; font-family:Arial; font-size:11px; color:#943415; line-height:20px; text-align:center; text-decoration:none; background:url(../../../images/egovframework/kakaotheme/loginBg.jpg) no-repeat}
 .quots{width:990px; margin:145px 0 0 0; padding:0px; float:left}
 .quots p{margin:0px; font-family:Georgia; font-size:28px; color:#497f35; line-height:32px; text-align:center; text-indent:50px}
+
+.fullCenterPanel{width:990px; margin:145px 0 0 0; padding:0px; float:left; text-align:center}
+.fullCenterPanel .services{width:604px; margin:34px 0 0 0; padding:0px; float:left}
+.fullCenterPanel .services h2{width:604px; margin:0px; padding:0px; float:left; font-family:Georgia; font-size:24px; color:#2c787b; line-height:28px; font-weight:normal}
+.fullCenterPanel .services .pic{width:163px; height:202px; margin:15px 0 0 0; padding:0 0 0 28px; float:left; background:url(../../../images/egovframework/kakaotheme/pic1.jpg) no-repeat}
+.fullCenterPanel .services .pic a{font-family:Arial; font-size:10px; color:#943415; line-height:14px; margin:146px 0 0 0; padding:0px; float:left; width:123px}
+.fullCenterPanel .services p{width:390px; margin:14px 0 0 0; padding:0 0 0 20px; float:left; font-family:Arial; font-size:12px; color:#bb9d59; line-height:16px}
+.fullCenterPanel .services p span{font-weight:bold}
+.fullCenterPanel .services h3{width:390px; margin:13px 0 0 0; padding:0 0 0 20px; float:left; font-family:Georgia; font-size:18px; color:#5c4527; line-height:22px; font-weight:normal}
+.fullCenterPanel .services ul{width:390px; margin:5px 0 0 0; padding:0 0 0 20px; float:left; display:block}
+.fullCenterPanel .services ul li{width:390px; margin:0px; padding:0px; float:left; display:block}
+.fullCenterPanel .services ul li a{width:372px; height:22px; margin:0px; padding:0 0 0 18px; float:left; font-family:Arial; font-size:11px; color:#943415; line-height:20px; font-weight:bold; text-decoration:none; border-bottom:#d8cd2f dashed 1px; background:url(../../../images/egovframework/kakaotheme/listStyle.jpg) no-repeat 2px 6px}
+.fullCenterPanel .services ul li a.bottom{width:372px; height:22px; margin:0px; padding:0 0 0 18px; float:left; font-family:Arial; font-size:11px; color:#943415; line-height:20px; text-decoration:none; border-bottom:0px; background:url(../../../images/egovframework/kakaotheme/listStyle.jpg) no-repeat 2px 6px}
+
 .leftPanel{width:637px; margin:27px 0 0 0; padding:0 0 0 35px; float:left}
 .leftPanel .about{width:604px; margin:0px; padding:0px; float:left}
 .leftPanel .about h2{width:604px; margin:0px; padding:0px; float:left; font-family:Georgia; font-size:30px; color:#0b636b; line-height:34px; font-weight:normal}
@@ -41,6 +57,7 @@ h1{width:223px; height:48px; margin:20px 0 0 0; padding:0 110px; float:right; li
 /*#leftPanel .testimonial p .dqo{width:11px; height:9px; text-indent:-9999px; background:url(../../../images/egovframework/kakaotheme/quo.jpg) no-repeat}*/
 .leftPanel .testimonial h3{width:100px; height:17px; margin:6px 0 0 0; padding:0 0 12px 28px; float:left; font-family:Arial; font-size:11px; color:#943415; font-weight:bold; background:url(../../../images/egovframework/kakaotheme/testimIco.jpg) no-repeat}
 .leftPanel .testimonial h3 span{font-weight:normal}
+
 .rightPanel{width:266px; margin:40px 0 0 0; padding:0 0 74px 36px; float:left; background:url(../../../images/egovframework/kakaotheme/rigthBg.jpg) no-repeat}
 .rightPanel  h2{width:262px;  margin:0px; padding:0px; float:left; font-family:Georgia; font-size:24px; color:#0b636b; line-height:28px; font-weight:normal}
 .rightPanel .view{width:58px; margin:3px 2px 0 0; padding:0 0 0 15px; float:right; font-family:Arial; font-size:11px; color:#943415; font-weight:bold; text-decoration:none; background:url(../../../images/egovframework/kakaotheme/listStyle.jpg) no-repeat 0 4px}
@@ -61,6 +78,7 @@ h1{width:223px; height:48px; margin:20px 0 0 0; padding:0 110px; float:right; li
 .rightPanel .project ul li a:hover{font-weight:bold; color:#943415}
 .rightPanel .project ul li a.bottom{width:250px; height:20px; margin:0px; padding:0 0 0 10px; float:left; font-family:Arial; font-size:12px; color:#bb9d59; line-height:18px; text-decoration:none; background:url(../../../images/egovframework/kakaotheme/listbg.jpg) no-repeat}
 .rightPanel .project ul li a.bottom:hover{font-weight:bold; color:#943415} 
+
 .footPanel{width:923px; margin:0px; padding:25px 0 29px 0; float:left; background:url(../../../images/egovframework/kakaotheme/footbg.jpg) no-repeat center top}
 .footPanel .nav{width:923px; margin:0px; padding:0px; float:left}
 .footPanel .nav ul{width:375px; margin:0 auto; padding:0px; display:block}
@@ -75,6 +93,7 @@ h1{width:223px; height:48px; margin:20px 0 0 0; padding:0 110px; float:right; li
 .footPanel .validation ul li{width:auto; margin:0px; padding:0px; float:left; display:block}
 .footPanel .validation ul li .blank{width:6px; height:17px; margin:0px; padding:0px; float:left}
 .footPanel .validation ul li a{width:66px; height:17px; margin:0px; padding:0px; float:left; font-family:Arial; font-size:10px; font-weight:bold; color:#943415; line-height:16px; text-align:center; text-decoration:none; background:url(../../../images/egovframework/kakaotheme/validationBg.jpg) no-repeat}
+
 .menu{width:990px; margin:32px 0 0 0; padding:0px; float:left}
 .menu ul{width:450px; margin:0px; padding:0px; float:right; display:block}
 .menu ul li{width:auto; margin:0px; padding:0px; float:left; display:block}
@@ -93,3 +112,24 @@ button{ margin:0; padding:0; overflow:visible; cursor:pointer;}
 /* fieldset */
 .fieldset {border: 1px solid #AAAAAA; height: 150px; overflow-y: auto; }
 .redlabel {margin:0 0 10px 0; padding:0px; font-family:Arial; font-size:10px; color:#ff0000; line-height:20px}
+
+/* 갤러리형 리스트 */
+/* learnign_list_리스트형 갤러리 01 */
+.gallery_list_type {clear:both; width:auto; border-bottom: 1px dotted #aaa;border-top: 1px dotted #aaa; height:auto; padding:20px 15px 0 15px}
+.gallery_list_type:hover {background: #f9f9f9; }
+.gallery_list_type .gallery_list_type_left {float:left; text-align:center}
+.gallery_list_type .images_thumbnail_120_80	{display:inline-block;border:1px solid #ccc; padding:3px; margin-bottom:6px; width:120px; height:80px; background:#fff}
+.gallery_list_type .gallery_list_type_center {float:left;padding:0 0 0 10px}
+.gallery_list_type .gallery_list_type_center dt	{margin:0; font-size:15px; font-weight:bold; width:460px}
+.gallery_list_type .gallery_list_type_center dt:hover {text-decoration: underline; color:blue;}
+
+.dd_info {margin:0; padding:0 0 7px 0; font-size:11px; width:465px; border-bottom:1px dotted #ddd; color:#888}
+.dd_info span	{background:#008aff; padding:0 2px 1px 2px; font-size:9px; margin-right:5px; line-height:0.5em; color:#fff}
+
+.star_count {display:inline-block; width:auto; margin:3px 0 0 0; color:#888}
+.star_count .review_count {color:#ff6c00; font-weight:bold; font-size:11px; font-family:Verdana}
+
+.sub_info {margin:2px 0 0 0; color:#888 }
+.info_creator {font-weight:bold; font-size:14px; color:#000}
+.info_createddate {color:#000; font-family:Verdana; vertical-align:bottom}
+.info_category	{color:#000}
