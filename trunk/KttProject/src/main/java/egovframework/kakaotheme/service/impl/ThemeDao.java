@@ -45,7 +45,7 @@ import egovframework.rte.sample.service.SampleVO;
 public class ThemeDao extends EgovAbstractDAO {
 
     public List selectThemeList() throws Exception {
-        return getSqlMapClientTemplate().queryForList("");
+        return getSqlMapClientTemplate().queryForList("themeDAO.selectAllTheme");
     }
 
 }

@@ -19,6 +19,8 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.springframework.stereotype.Service;
+
 import egovframework.kakaotheme.service.ThemeService;
 
 /**  
@@ -37,6 +39,8 @@ import egovframework.kakaotheme.service.ThemeService;
  * 
  *  Copyright (C) by MOPAS All right reserved.
  */
+
+@Service("themeService")
 public class ThemeServiceImpl implements ThemeService{
 	
 	@Resource(name="themeDao")
@@ -44,7 +48,7 @@ public class ThemeServiceImpl implements ThemeService{
 
 	public List getThemeList() throws Exception {
 		List list = themeDao.selectThemeList();
-		return null;
+		return list;
 	}
 	
 }

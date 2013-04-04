@@ -15,6 +15,8 @@
  */
 package egovframework.kakaotheme.controller;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
@@ -23,13 +25,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springmodules.validation.commons.DefaultBeanValidator;
 
+import egovframework.kakaotheme.service.ThemeService;
 import egovframework.rte.fdl.property.EgovPropertyService;
 
 /**
  * @Class Name : PageController.java
  * @Description : Main Controller Class
- * @Modification Information @ @ 수정일 수정자 수정내용 ------------------------------- @
- *               2013.03.27 hycho 최초생성
+ * @Modification Information @ 
  * @author kakaotalk theme editor 실행 환경 구성
  * @since 2013. 03.27
  * @version 1.0
@@ -46,18 +48,22 @@ public class ThemeController {
 	/** Validator */
 	@Resource(name = "beanValidator")
 	protected DefaultBeanValidator beanValidator;
-
+	
+	@Resource(name = "themeService")
+	protected ThemeService themeService;
+	
 	/**
 	 * 저작 페이지를 보여준다.
-	 * 
+	 * jsonData를 리턴한다.
 	 * @param model
 	 * @return "/kakaotheme/main"
 	 * @exception Exception
 	 */
 	@RequestMapping(value = "/theme/themeListAjax.do", method = RequestMethod.POST)
-	public @ResponseBody String themePage() throws Exception {
-		
-		return "/kakaotheme/theme";
+	@ResponseBody
+	public String themePage() throws Exception {
+		List themeAllList = themeService.getThemeList();
+		return "test";
 	}
 
 }
