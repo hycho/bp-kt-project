@@ -14,10 +14,26 @@
 <script src="<c:url value='/script/jquery-1.8.2.js'/>"></script>
 <script src="<c:url value='/script/kakaotheme/menu.js'/>"></script>
 <script type="text/javascript">
-	$(document).ready(function() {
-		// call to menu.js
-		eventMenu($(".menu"), $("#goPage"));
+$(document).ready(function() {
+	// call to menu.js
+	eventMenu($(".menu"), $("#goPage"));
+	getThemeListAjax();
+});
+	
+function getThemeListAjax(){
+	$.ajax({
+		type:"POST",
+		url:"/theme/themeListAjax.do",
+		success:function(data){
+			console.log(data);
+		},
+		error:function(request, status, error){
+			alert(request);
+			alert(status);
+			alert(error);
+		}
 	});
+}
 </script>
 </head>
 
