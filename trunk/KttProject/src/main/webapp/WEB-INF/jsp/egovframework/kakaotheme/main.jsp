@@ -13,7 +13,8 @@
 <script src="<c:url value='/script/egovframework/kakaotheme/main/Titillium.font.js'/>"></script>
 <script type="text/javascript">
 Cufon.replace('h1,h2,h3,#menu li a');
-
+Counter(new Date("Oct 20 2012 12:00:00 UTC"));
+var done_message = "It's here!";
 $(document).ready(function() {
 	anim(); 
 	$(".scrollable").scrollable({ });
@@ -22,10 +23,6 @@ $(document).ready(function() {
 		'overlayColor'		: '#000',
 		'overlayOpacity'	: 0.9
 	});
-	
-	Counter(new Date("Oct 20 2012 12:00:00 UTC"));
-	
-	var done_message = "It's here!";
 });
 </script>
 </head>
@@ -60,19 +57,19 @@ $(document).ready(function() {
 					
 					<!-- group 1 -->
 					<ul>
-						<li><a href="images/screenshots/big1.jpg" title="Image Caption"><img src="images/screenshots/thumb1.jpg" alt="Image" /></a></li>
-						<li><a href="images/screenshots/big1.jpg" title="Image Caption"><img src="images/screenshots/thumb1.jpg" alt="Image" /></a></li>
-						<li><a href="images/screenshots/big1jpg" title="Image Caption"><img src="images/screenshots/thumb1.jpg" alt="Image" /></a></li>
-						<li><a href="images/screenshots/big1.jpg" title="Image Caption"><img src="images/screenshots/thumb1.jpg" alt="Image" /></a></li>
+						<li><a href="/images/egovframework/kakaotheme/main/screenshots/big1.jpg" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
+						<li><a href="/images/egovframework/kakaotheme/main/screenshots/big1.jpg" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
+						<li><a href="/images/egovframework/kakaotheme/main/screenshots/big1jpg" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
+						<li><a href="/images/egovframework/kakaotheme/main/screenshots/big1.jpg" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
 					</ul>
 					<!-- /group 1 -->	
 				
 					<!-- group 2 -->
 					<ul>
-						<li><a href="images/screenshots/big1.jpg" title="Image Caption"><img src="images/screenshots/thumb1.jpg" alt="Image" /></a></li>
-						<li><a href="images/screenshots/big1.jpg" title="Image Caption"><img src="images/screenshots/thumb1.jpg" alt="Image" /></a></li>
-						<li><a href="images/screenshots/big1.jpg" title="Image Caption"><img src="images/screenshots/thumb1.jpg" alt="Image" /></a></li>
-						<li><a href="images/screenshots/big1.jpg" title="Image Caption"><img src="images/screenshots/thumb1.jpg" alt="Image" /></a></li>
+						<li><a href="/images/egovframework/kakaotheme/main/screenshots/big1.jpg" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
+						<li><a href="/images/egovframework/kakaotheme/main/screenshots/big1.jpg" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
+						<li><a href="/images/egovframework/kakaotheme/main/screenshots/big1.jpg" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
+						<li><a href="/images/egovframework/kakaotheme/main/screenshots/big1.jpg" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
 					</ul>
 					<!-- /group 2 -->
 					
