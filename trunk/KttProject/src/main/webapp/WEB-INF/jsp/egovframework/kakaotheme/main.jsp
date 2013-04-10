@@ -1,19 +1,23 @@
+<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ include file="common/initPage.jsp" %>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Theme</title>
-<link type="text/css" rel="stylesheet" href="<c:url value='/css/egovframework/kakaotheme/main.css'/>"/>
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/egovframework/kakaotheme/main.css'/>"/>
 <script src="<c:url value='/script/egovframework/kakaotheme/main/jquery-1.8.2.js'/>"></script>
 <script src="<c:url value='/script/egovframework/kakaotheme/main/cufon-yui.js'/>"></script>
 <script src="<c:url value='/script/egovframework/kakaotheme/main/jquery.fancybox-1.3.2.pack.js'/>"></script>
 <script src="<c:url value='/script/egovframework/kakaotheme/main/jquery.tools.js'/>"></script>
 <script src="<c:url value='/script/egovframework/kakaotheme/main/pitch.js'/>"></script>
 <script src="<c:url value='/script/egovframework/kakaotheme/main/Titillium.font.js'/>"></script>
+
+<script type="text/javascript" src="http://widgets.twimg.com/j/2/widget.js"></script>
+
 <script type="text/javascript">
-Cufon.replace('h1,h2,h3,#menu li a');
+Cufon.replace('h1,h2,h3');
 Counter(new Date("Oct 20 2012 12:00:00 UTC"));
+
 var done_message = "It's here!";
 $(document).ready(function() {
 	anim(); 
@@ -31,7 +35,7 @@ $(document).ready(function() {
 	
 		<!-- top -->
 		<div id="top">
-			<h1 id="logo"><a href="#">Fine<span>Product</span></a></h1>
+			<h1 id="logo"><a href="#">KTA<span>Project</span></a></h1>
 			<ul id="menu">
 				<li><a class="current" href="#">Home</a></li>
 				<li><a href="#">About</a></li>
@@ -43,7 +47,7 @@ $(document).ready(function() {
 		
 		<!-- pitch -->
 		<div id="pitch">
-			<h2 id="hello">Revolutionizing the way you communicate online.</h2>
+			<h2 id="hello">Revolutionizing the way you authoring theme online.</h2>
 			<p id="countdown"></p>
 		</div>
 		<!-- /pitch -->
@@ -57,19 +61,19 @@ $(document).ready(function() {
 					
 					<!-- group 1 -->
 					<ul>
-						<li><a href="/images/egovframework/kakaotheme/main/screenshots/big1.jpg" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
-						<li><a href="/images/egovframework/kakaotheme/main/screenshots/big1.jpg" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
-						<li><a href="/images/egovframework/kakaotheme/main/screenshots/big1jpg" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
-						<li><a href="/images/egovframework/kakaotheme/main/screenshots/big1.jpg" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
+						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
+						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
+						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
+						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
 					</ul>
 					<!-- /group 1 -->	
 				
 					<!-- group 2 -->
 					<ul>
-						<li><a href="/images/egovframework/kakaotheme/main/screenshots/big1.jpg" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
-						<li><a href="/images/egovframework/kakaotheme/main/screenshots/big1.jpg" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
-						<li><a href="/images/egovframework/kakaotheme/main/screenshots/big1.jpg" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
-						<li><a href="/images/egovframework/kakaotheme/main/screenshots/big1.jpg" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
+						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
+						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
+						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
+						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
 					</ul>
 					<!-- /group 2 -->
 					
@@ -126,12 +130,38 @@ $(document).ready(function() {
 		<div id="side">
 			<div class="boxtop"></div>
 			<div class="boxmiddle">
-			
 				<!-- twitter widget -->
-				<script type="text/javascript" src="http://widgets.twimg.com/j/2/widget.js"></script>
-				<script type="text/javascript">new TWTR.Widget({version:2,type:'profile',rpp:11,interval:4000,width:'auto',height:135,theme:{shell:{background:'none',color:'#A7A6AE'},tweets:{background:'none',color:'#A7A6AE',links:'#DCDCDE'}},features:{scrollbar:false,loop:false,live:true,hashtags:true,timestamp:false,avatars:false,behavior:'default'}}).render().setUser('solucija').start();</script>
+				<script type="text/javascript">
+					new TWTR.Widget({
+						version:2,
+						type:'profile',
+						rpp:11,
+						interval:30000,
+						width:'auto',
+						height:135,
+						theme:{
+							shell:{
+								background:'none',
+								color:'#A7A6AE'
+							},
+							tweets:{
+								background:'none',
+								color:'#A7A6AE',
+								links:'#DCDCDE'
+							}
+						},
+						features:{
+							scrollbar:false,
+							loop:false,
+							live:true,
+							hashtags:true,
+							timestamp:false,
+							avatars:false,
+							behavior:'default'
+						}
+					}).render().setUser('kofwhgh').start();</script>
+				</script>
 				<!-- /twitter widget -->
-				
 			</div>
 			<div class="boxbottom"></div>
 			
@@ -139,8 +169,8 @@ $(document).ready(function() {
 		<!-- /side -->
 		
 		<!-- footer -->
-		<div id="footer">
-			<p>&copy; 2012 <a href="#">FineProduct</a> &middot; All Rights Reserved &middot; <a title="Awesome Web Templates" href="http://www.solucija.com/">Solucija</a></p>
+		<div id="footer" class="footer_area">
+			<p>&copy; 2013 <a href="#">KTA Product</a> &middot; All Rights Reserved &middot; <a title="Good Developer" href="http://babayetustudy.tistory.com//">Cho Ho Young</a></p>
 		</div>
 		<!-- /footer -->
 	</div>
