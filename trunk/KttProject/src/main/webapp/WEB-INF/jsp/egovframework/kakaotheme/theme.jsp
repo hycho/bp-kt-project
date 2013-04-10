@@ -81,18 +81,34 @@ function getThemeListAjax(){
 				<p>&nbsp;</p>
 			</div>
 			<div class="cb"></div>
-			<article class="gallery_list_type">
-   				<div class="gallery_list_type_left">
-   					<a href="#" class="images_thumbnail_120_80"><img src="./images/ubion/no-image-120.gif"></a><br>
-   				</div>
-				<dl class="gallery_list_type_center">
-					<dt><a href="#">JAVA 기본 문법 정복</a></dt>
-					<dd class="dd_info ell"><span>학습내용</span>JAVA 프로그래밍의 가장 기초가 되는 기본문법에 대해 학습합니다. 뒤에 나오는 내용들은 자동 줄임.</dd>
-					<dd class="star_count">평점 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;리뷰 <span class="review_count">121</span></dd>
-					<dd class="sub_info">저작자 <span class="info_creator">홍길동</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;등록일 <span class="info_createddate">2012.12.12</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;분류 <span class="info_category">JAVA</span></dd>
-				</dl>
-				<div class="cb"></div>
-			</article>
+			<div>
+				<ul class="lst_type">
+					<li>
+						<dl class="lst_type2">
+						<dt class="tit"><a href="#"><strong>타이틀과 텍스트가 함께 있는 이미지리스트입니다.</strong></a></dt>
+						<dd class="photo"><a href="#"><img src="/images/egovframework/kakaotheme/logo.png" width="90" height="90" alt=""></a></dd>
+						<dd><a href="#">리스트의 마크업 구조는 1. 타이틀&lt;dt&gt;, 2. 이미지&lt;dd&gt;, 3. 텍스트&lt;dd&gt; 순서입니다.리스트의 마크업 구조는 1. 타이틀&lt;dt&gt;, 2. 이미지&lt;dd&gt;, 3. 텍스트&lt;dd&gt; 순서입니다.리스트의 마크업 구조는 1. 타이틀&lt;dt&gt;, 2. 이미지&lt;dd&gt;, 3. 텍스트&lt;dd&gt; 순서입니다.리스트의 마크업 구조는 1. 타이틀&lt;dt&gt;, 2. 이미지&lt;dd&gt;, 3. 텍스트&lt;dd&gt; 순서입니다.</a>
+						</dd>
+						</dl>
+					</li>
+					<li>
+						<dl class="lst_type2">
+						<dt class="tit"><a href="#"><strong>타이틀과 텍스트가 함께 있는 이미지리스트입니다.</strong></a></dt>
+						<dd class="photo"><a href="#"><img src="img/thkim.gif" width="90" height="90" alt=""></a></dd>
+						<dd><a href="#">리스트의 마크업 구조는 1. 타이틀&lt;dt&gt;, 2. 이미지&lt;dd&gt;, 3. 텍스트&lt;dd&gt; 순서입니다.리스트의 마크업 구조는 1. 타이틀&lt;dt&gt;, 2. 이미지&lt;dd&gt;, 3. 텍스트&lt;dd&gt; 순서입니다.리스트의 마크업 구조는 1. 타이틀&lt;dt&gt;, 2. 이미지&lt;dd&gt;, 3. 텍스트&lt;dd&gt; 순서입니다.리스트의 마크업 구조는 1. 타이틀&lt;dt&gt;, 2. 이미지&lt;dd&gt;, 3. 텍스트&lt;dd&gt; 순서입니다.</a>
+						</dd>
+						</dl>
+					</li>
+					<li>
+						<dl class="lst_type2">
+						<dt class="tit"><a href="#"><strong>타이틀과 텍스트가 함께 있는 이미지리스트입니다.</strong></a></dt>
+						<dd class="photo"><a href="#"><img src="img/thkim.gif" width="90" height="90" alt=""></a></dd>
+						<dd><a href="#">리스트의 마크업 구조는 1. 타이틀&lt;dt&gt;, 2. 이미지&lt;dd&gt;, 3. 텍스트&lt;dd&gt; 순서입니다.리스트의 마크업 구조는 1. 타이틀&lt;dt&gt;, 2. 이미지&lt;dd&gt;, 3. 텍스트&lt;dd&gt; 순서입니다.리스트의 마크업 구조는 1. 타이틀&lt;dt&gt;, 2. 이미지&lt;dd&gt;, 3. 텍스트&lt;dd&gt; 순서입니다.리스트의 마크업 구조는 1. 타이틀&lt;dt&gt;, 2. 이미지&lt;dd&gt;, 3. 텍스트&lt;dd&gt; 순서입니다.</a>
+						</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
 			<div class="footPanel">
 				<div class="nav">
 					<ul>
