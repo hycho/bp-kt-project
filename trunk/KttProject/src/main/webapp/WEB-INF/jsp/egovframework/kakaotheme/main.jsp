@@ -20,6 +20,8 @@ Counter(new Date("Oct 20 2012 12:00:00 UTC"));
 
 var done_message = "It's here!";
 $(document).ready(function() {
+	anim(); 
+	$(".scrollable").scrollable({ });
 });
 </script>
 </head>
