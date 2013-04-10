@@ -1,9 +1,3 @@
-/*
-	FineProduct CSS definitions
-	(c) Solucija.com
-*/
-
-
 @charset "utf-8";
 
 /* reset */
@@ -17,7 +11,7 @@ img { border: 0; }
 
 body { 
 	font: 0.74em Arial, Verdana, Arial, Helvetica, sans-serif;
-	background: #FFFFFF url(../images/bg.png) repeat-x;
+	background: #FFFFFF url(../../../images/egovframework/kakaotheme/main/bg.png) repeat-x;
 	color: #777;
 	line-height: 1.6em;
 }
@@ -92,7 +86,7 @@ h3 {
 	color: #A09FA8;
 }
 #menu li a:hover, #menu li a.current {
-	background: url(../images/tab.png) repeat-x left bottom;
+	background: url(../../../images/egovframework/kakaotheme/main/tab.png) repeat-x left bottom;
 }
 #menu li a.current {
 	color: #fff;
@@ -116,7 +110,7 @@ h3 {
 	height: 70px;
 	padding: 140px 0 0;
 	margin: 0 0 60px;
-	background: url(../images/pitch.png) no-repeat;
+	background: url(../../../images/egovframework/kakaotheme/main/pitch.png) no-repeat;
 }
 
 /* countdown */
@@ -136,7 +130,7 @@ h3 {
 	clear: both;
 	margin: 0 0 45px;
 	border-bottom: 3px double #ddd;
-	background: url(../images/shade.png) no-repeat center bottom;
+	
 }
 .col { 
 	float: left; 
@@ -156,7 +150,7 @@ h3 {
 	display: block;
 	position: relative;
 	color: #ddd; 
-	background: url(../images/more.png) no-repeat; 
+	background: url(../../../images/egovframework/kakaotheme/main/more.png) no-repeat; 
 	text-align: center; 
 	width: 87px; 
 	height: 21px; 
@@ -177,10 +171,10 @@ h3 {
 /* screenshot items */
 #screenshots .items ul{ list-style: none; float: left; }
 #screenshots .items ul li { float: left; }		
-#screenshots .items ul li a{ float: left; width: 172px; height: 103px; padding: 10px 0 0 10px; margin: 0 25px 0 0; overflow: hidden; background: url(../images/thumb_frame.png) no-repeat; }
+#screenshots .items ul li a{ float: left; width: 172px; height: 103px; padding: 10px 0 0 10px; margin: 0 25px 0 0; overflow: hidden; background: url(../../../images/egovframework/kakaotheme/main/thumb_frame.png) no-repeat; }
 
 /* screenshot arrows */
-#screenshots a.arrows { display: block; width: 12px; height: 21px; text-indent: -999999px; background: url(../images/arrows.png) no-repeat; top: 50px; }
+#screenshots a.arrows { display: block; width: 12px; height: 21px; text-indent: -999999px; background: url(../../../images/egovframework/kakaotheme/main/arrows.png) no-repeat; top: 50px; }
 #screenshots a.prev { background-position: top left; position: absolute; left: -50px; }
 #screenshots a.next { background-position: top right; position: absolute; right: -50px; }
 #screenshots a.prev:hover { background-position: left bottom; }
@@ -207,23 +201,23 @@ h3 {
 
 /* side twitter box */
 .boxtop {
-	background: url(../images/boxtop.png) no-repeat; 
+	background: url(../../../images/egovframework/kakaotheme/main/boxtop.png) no-repeat; 
 	padding: 4px 0;
 }
 .boxmiddle {
-	background: url(../images/boxmiddle.png); 
+	background: url(../../../images/egovframework/kakaotheme/main/boxmiddle.png); 
 	padding: 0 4px; 
 	height: 220px;
 }
 .boxbottom {
-	background: url(../images/boxbottom.png) no-repeat left bottom; 
+	background: url(../../../images/egovframework/kakaotheme/main/boxbottom.png) no-repeat left bottom; 
 	padding: 5px 0;
 }
 
 /* footer */
 #footer {
 	clear: both;
-	background: url(../images/bullet.png) repeat-x;
+	background: url(../../../images/egovframework/kakaotheme/main/bullet.png) repeat-x;
 	padding: 40px 0 20px;
 	color: #999;
 	text-shadow: 1px 1px 1px #fff;
