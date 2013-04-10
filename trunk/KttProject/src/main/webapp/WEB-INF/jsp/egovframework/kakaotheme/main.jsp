@@ -20,13 +20,6 @@ Counter(new Date("Oct 20 2012 12:00:00 UTC"));
 
 var done_message = "It's here!";
 $(document).ready(function() {
-	anim(); 
-	$(".scrollable").scrollable({ });
-	$(".items a").fancybox({
-		'titlePosition'		: 'inside',
-		'overlayColor'		: '#000',
-		'overlayOpacity'	: 0.9
-	});
 });
 </script>
 </head>
@@ -58,7 +51,6 @@ $(document).ready(function() {
 		
 			<div class="scrollable">
 				<div class="items">
-					
 					<!-- group 1 -->
 					<ul>
 						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
@@ -76,7 +68,6 @@ $(document).ready(function() {
 						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
 					</ul>
 					<!-- /group 2 -->
-					
 				</div>
 			</div>
 		
