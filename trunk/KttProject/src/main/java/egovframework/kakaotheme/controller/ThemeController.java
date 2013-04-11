@@ -16,9 +16,13 @@
 package egovframework.kakaotheme.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -26,6 +30,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springmodules.validation.commons.DefaultBeanValidator;
 
 import egovframework.kakaotheme.service.ThemeService;
+import egovframework.kakaotheme.util.transform.RequestParamDataTrans;
 import egovframework.rte.fdl.property.EgovPropertyService;
 
 /**
@@ -64,6 +69,28 @@ public class ThemeController {
 	public String themePage() throws Exception {
 		List themeAllList = themeService.getThemeList();
 		return "test";
+	}
+	
+	/**
+	 * 저작 페이지를 보여준다.
+	 * jsonData를 리턴한다.
+	 * @param model
+	 * @return "/kakaotheme/main"
+	 * @exception Exception
+	 */
+	@RequestMapping(value = "/theme/recommendThemeListAjax.do", method = RequestMethod.POST)
+	@ResponseBody
+	public String recommendThemeListAjax(HttpServletRequest request) throws Exception {
+		
+		Map<String, Object> parameters = RequestParamDataTrans.transDataMap(request);
+		
+		List<Map<String, Object>> resultList = themeService.getRecommendThemeList(parameters);
+		
+		JSONObject jsonObject = new JSONObject();
+		JSONArray jsonArray = new JSONArray(resultList);
+		jsonObject.put("data", jsonArray);
+		
+		return jsonObject.toString();
 	}
 
 }

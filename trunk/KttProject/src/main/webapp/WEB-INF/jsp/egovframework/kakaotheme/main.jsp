@@ -22,7 +22,27 @@ var done_message = "It's here!";
 $(document).ready(function() {
 	anim(); 
 	$(".scrollable").scrollable({ });
+	getRecommendThemeListAjax();
 });
+
+function getRecommendThemeListAjax(){
+	$.ajax({
+		type:"POST",
+		url:"/theme/recommendThemeListAjax.do",
+		data:{
+			cnt : 8
+		},
+		success:function(data){
+			console.log(data);
+		},
+		error:function(request, status, error){
+			console.log(request);
+			console.log(status);
+			console.log(error);
+		}
+	});
+}
+
 </script>
 </head>
 <body>

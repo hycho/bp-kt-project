@@ -16,6 +16,7 @@
 package egovframework.kakaotheme.service;
 
 import java.util.List;
+import java.util.Map;
 
 /**  
  * @Class Name : ThemeService.java
@@ -35,4 +36,5 @@ import java.util.List;
  */
 public interface ThemeService {
 	public List getThemeList() throws Exception;
+	public List<Map<String, Object>> getRecommendThemeList(Map<String, Object> parameters) throws Exception;
 }

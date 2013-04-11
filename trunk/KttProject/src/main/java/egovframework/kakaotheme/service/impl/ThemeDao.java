@@ -16,6 +16,7 @@
 package egovframework.kakaotheme.service.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
@@ -48,4 +49,8 @@ public class ThemeDao extends EgovAbstractDAO {
         return getSqlMapClientTemplate().queryForList("themeDAO.selectAllTheme");
     }
 
+    public List<Map<String, Object>> selectRecommendList(Map<String, Object> parameters) throws Exception {
+        return getSqlMapClientTemplate().queryForList("themeDAO.selectAllTheme", parameters);
+    }
+    
 }

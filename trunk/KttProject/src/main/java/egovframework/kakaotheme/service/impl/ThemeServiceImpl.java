@@ -16,6 +16,7 @@
 package egovframework.kakaotheme.service.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -47,8 +48,13 @@ public class ThemeServiceImpl implements ThemeService{
     private ThemeDao themeDao;
 
 	public List getThemeList() throws Exception {
-		List list = themeDao.selectThemeList();
-		return list;
+		List resultList = themeDao.selectThemeList();
+		return resultList;
+	}
+
+	public List<Map<String, Object>> getRecommendThemeList(Map<String, Object> parameters) throws Exception {
+		List<Map<String, Object>> resultList = themeDao.selectRecommendList(parameters);
+		return resultList;
 	}
 	
 }
