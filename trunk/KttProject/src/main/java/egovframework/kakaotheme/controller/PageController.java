@@ -74,12 +74,24 @@ public class PageController {
 	 * 저작 페이지를 보여준다.
 	 *  
 	 * @param model
-	 * @return "/kakaotheme/main"
+	 * @return "/kakaotheme/theme"
 	 * @exception Exception
 	 */
 	@RequestMapping(value = "/page/theme.do")
 	public String themePage(ModelMap model) throws Exception {
 		return "/kakaotheme/theme";
 	}
-
+	
+	/**
+	 * about 페이지를 보여준다.
+	 *  
+	 * @param model
+	 * @return "/kakaotheme/about"
+	 * @exception Exception
+	 */
+	@RequestMapping(value = "/page/about.do")
+	public String aboutPage(ModelMap model) throws Exception {
+		return "/kakaotheme/about";
+	}
+	
 }

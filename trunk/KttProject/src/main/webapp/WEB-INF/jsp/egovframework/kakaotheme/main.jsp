@@ -46,15 +46,16 @@ function getRecommendThemeListAjax(){
 </script>
 </head>
 <body>
+	<spring:eval expression="@config['Globals.OsType']" />
 	<div id="content">
 	
 		<!-- top -->
 		<div id="top">
 			<h1 id="logo"><a href="#">KTA<span>Project</span></a></h1>
 			<ul id="menu">
-				<li><a class="current" href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Press Releases</a></li>
+				<li><a class="current" href="/page/main.do">Home</a></li>
+				<li><a href="/page/theme.do">Theme</a></li>
+				<li><a href="/page/about.do">About</a></li>
 				<li><a href="#">Contact</a></li>
 			</ul>
 		</div>
