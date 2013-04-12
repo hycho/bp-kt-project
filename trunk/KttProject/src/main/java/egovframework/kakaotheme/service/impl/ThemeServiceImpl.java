@@ -56,5 +56,10 @@ public class ThemeServiceImpl implements ThemeService{
 		List<Map<String, Object>> resultList = themeDao.selectRecommendList(parameters);
 		return resultList;
 	}
+
+	public Map<String, Object> getViewTheme(Map<String, Object> parameters)	throws Exception {
+		Map<String, Object> result = themeDao.viewTheme(parameters);
+		return result;
+	}
 	
 }

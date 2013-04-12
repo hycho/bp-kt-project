@@ -1,9 +1,9 @@
 <%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@ include file="common/initPage.jsp" %>
+<%@ include file="../common/initPage.jsp" %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Theme</title>
+<title>Theme view</title>
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/egovframework/kakaotheme/main.css'/>"/>
 <script src="<c:url value='/script/egovframework/kakaotheme/main/jquery-1.8.2.js'/>"></script>
 <script src="<c:url value='/script/egovframework/kakaotheme/main/cufon-yui.js'/>"></script>
@@ -19,56 +19,23 @@ Cufon.replace('h1,h2,h3');
 Counter(new Date("Oct 20 2012 12:00:00 UTC"));
 
 var done_message = "It's here!";
-
-
 $(document).ready(function() {
 	anim(); 
 	$(".scrollable").scrollable({ });
-	getRecommendThemeListAjax();
 });
-
-function getRecommendThemeListAjax(){
-	$.ajax({
-		type:"POST",
-		url:"/theme/recommendThemeListAjax.do",
-		data:{
-			cnt : 8
-		},
-		success:function(data){
-			var jsonData = $.parseJSON(data);
-			var themeItemHtml = '<ul>';
-			
-			$.each(jsonData.data, function(index, map){
-				themeItemHtml += '<li>'+
-								 '<a href="#" title="'+map.THEME_NAME+'">'+
-								 '<img width="171px" height="100px" src="${WEB_PATH}/'+map.THEME_SEQ+'/thumbnail.jpg" alt="Image" />'+
-								 '</a>'+
-								 '</li>';
-			});
-			
-			themeItemHtml += '</ul>';
-			$("#recommendItems").append(themeItemHtml);
-		},
-		error:function(request, status, error){
-			console.log(request);
-			console.log(status);
-			console.log(error);
-		}
-	});
-}
-
 </script>
 </head>
 <body>
 	<div id="content">
+	
 		<!-- top -->
 		<div id="top">
 			<h1 id="logo"><a href="#">KTA<span>Project</span></a></h1>
 			<ul id="menu">
-				<li><a class="current" href="/page/main.do">Home</a></li>
-				<li><a href="/page/theme.do">Theme</a></li>
+				<li><a href="/page/main.do">Home</a></li>
+				<li><a class="current" href="/page/theme.do">Theme</a></li>
 				<li><a href="/page/about.do">About</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><a href="#">Contact</a></li> 
 			</ul>
 		</div>
 		<!-- /top -->
@@ -85,7 +52,24 @@ function getRecommendThemeListAjax(){
 			<a href="javascript:;" class="arrows prev">Previous</a>
 		
 			<div class="scrollable">
-				<div id="recommendItems" class="items">
+				<div class="items">
+					<!-- group 1 -->
+					<ul>
+						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
+						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
+						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
+						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
+					</ul>
+					<!-- /group 1 -->	
+				
+					<!-- group 2 -->
+					<ul>
+						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
+						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
+						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
+						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
+					</ul>
+					<!-- /group 2 -->
 				</div>
 			</div>
 		

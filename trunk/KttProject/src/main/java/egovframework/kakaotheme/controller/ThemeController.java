@@ -92,5 +92,20 @@ public class ThemeController {
 		
 		return jsonObject.toString();
 	}
+	
+	
+	@RequestMapping(value = "/theme/viewTheme.do", method = RequestMethod.POST)
+	@ResponseBody
+	public String viewTheme(HttpServletRequest request) throws Exception {
+		
+		Map<String, Object> parameters = RequestParamDataTrans.transDataMap(request);
+		
+		Map<String, Object> resultMap = themeService.getViewTheme(parameters);
+		
+		JSONObject jsonObject = new JSONObject();
+		jsonObject.put("data", resultMap);
+		
+		return jsonObject.toString();
+	}
 
 }

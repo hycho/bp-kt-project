@@ -37,4 +37,6 @@ import java.util.Map;
 public interface ThemeService {
 	public List getThemeList() throws Exception;
 	public List<Map<String, Object>> getRecommendThemeList(Map<String, Object> parameters) throws Exception;
+	public Map<String, Object> getViewTheme(Map<String, Object> parameters) throws Exception;
+	
 }
