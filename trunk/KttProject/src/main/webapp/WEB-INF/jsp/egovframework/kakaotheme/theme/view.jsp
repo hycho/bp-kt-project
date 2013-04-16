@@ -36,7 +36,7 @@ function getRecommendThemeListAjax(themeKey){
 			themeSeq : themeKey
 		},
 		success:function(data){
-			window.location="${WEB_PATH}/"+themeKey+"/downLoad.apk";
+			window.location="${WEB_PATH}/"+themeKey+"/<spring:eval expression="@config['Globals.DownLoadApkName']" />";
 		},
 		error:function(request, status, error){
 			console.log(request);

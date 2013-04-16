@@ -55,6 +55,9 @@ public class ThemeServiceImpl implements ThemeService{
 	
 	@Value("#{config['Globals.AndroidJarPath']}") 
 	private String androidJarPath;
+	
+	@Value("#{config['Globals.DownLoadApkName']}") 
+	private String downLoadApkName;
 		
 	public List getThemeList() throws Exception {
 		List resultList = themeDao.selectThemeList();
@@ -79,7 +82,7 @@ public class ThemeServiceImpl implements ThemeService{
 		String resourcePath = homePath + Constants.FILE_SEPARATOR + "res";
 		String pakagePath = homePath + Constants.FILE_SEPARATOR + "pakage.apk";
 		
-		String realPakagePath = homePath + Constants.FILE_SEPARATOR + "downLoad.apk";
+		String realPakagePath = homePath + Constants.FILE_SEPARATOR + downLoadApkName;
 		String classDexPath = homePath + Constants.FILE_SEPARATOR + "bin" + Constants.FILE_SEPARATOR + "classes.dex";
 		String srcPath = homePath + Constants.FILE_SEPARATOR + "src";
 		
