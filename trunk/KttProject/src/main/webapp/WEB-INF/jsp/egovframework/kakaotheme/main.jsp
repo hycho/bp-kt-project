@@ -40,7 +40,7 @@ function getRecommendThemeListAjax(){
 			
 			$.each(jsonData.data, function(index, map){
 				themeItemHtml += '<li>'+
-								 '<a href="#" title="'+map.THEME_NAME+'">'+
+								 '<a class="recommendTheme" key="'+map.THEME_SEQ+'" href="#" title="'+map.THEME_NAME+'">'+
 								 '<img width="171px" height="100px" src="${WEB_PATH}/'+map.THEME_SEQ+'/thumbnail.jpg" alt="Image" />'+
 								 '</a>'+
 								 '</li>';
@@ -48,6 +48,12 @@ function getRecommendThemeListAjax(){
 			
 			themeItemHtml += '</ul>';
 			$("#recommendItems").append(themeItemHtml);
+			
+			$(".recommendTheme").click(function(){
+				console.log("themeView seq = " + $(this).attr("key"));
+				$("#viewThemeForm").find("#themeSeq").val($(this).attr("key"));
+				$("#viewThemeForm").submit();
+			});
 		},
 		error:function(request, status, error){
 			console.log(request);
@@ -60,6 +66,9 @@ function getRecommendThemeListAjax(){
 </script>
 </head>
 <body>
+	<form id="viewThemeForm" name="viewThemeForm" action="/theme/viewTheme.do" method="post">
+		<input type="hidden" id="themeSeq" name="themeSeq" value=""/>
+	</form>
 	<div id="content">
 		<!-- top -->
 		<div id="top">
@@ -168,7 +177,7 @@ function getRecommendThemeListAjax(){
 							avatars:false,
 							behavior:'default'
 						}
-					}).render().setUser('kofwhgh').start();</script>
+					}).render().setUser('kofwhgh').start();
 				</script>
 				<!-- /twitter widget -->
 			</div>

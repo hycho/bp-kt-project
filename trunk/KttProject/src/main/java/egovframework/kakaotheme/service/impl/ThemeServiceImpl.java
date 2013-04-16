@@ -21,8 +21,11 @@ import java.util.Map;
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Value;
 
 import egovframework.kakaotheme.service.ThemeService;
+import egovframework.kakaotheme.util.constants.Constants;
+import egovframework.kakaotheme.util.process.ProcessRun;
 
 /**  
  * @Class Name : ThemeService.java
@@ -46,7 +49,13 @@ public class ThemeServiceImpl implements ThemeService{
 	
 	@Resource(name="themeDao")
     private ThemeDao themeDao;
-
+	
+	@Value("#{config['Globals.AbsoluteWebPath']}") 
+	private String absoluteWebPath;
+	
+	@Value("#{config['Globals.AndroidJarPath']}") 
+	private String androidJarPath;
+		
 	public List getThemeList() throws Exception {
 		List resultList = themeDao.selectThemeList();
 		return resultList;
@@ -61,5 +70,46 @@ public class ThemeServiceImpl implements ThemeService{
 		Map<String, Object> result = themeDao.viewTheme(parameters);
 		return result;
 	}
-	
+
+	public void pakageTheme(Map<String, Object> parameters)
+			throws Exception {
+		
+		String homePath = absoluteWebPath + Constants.FILE_SEPARATOR + (String) parameters.get("themeSeq");
+		String andriodXmlPath = homePath + Constants.FILE_SEPARATOR + "AndroidManifest.xml";
+		String resourcePath = homePath + Constants.FILE_SEPARATOR + "res";
+		String pakagePath = homePath + Constants.FILE_SEPARATOR + "pakage.apk";
+		
+		String realPakagePath = homePath + Constants.FILE_SEPARATOR + "downLoad.apk";
+		String classDexPath = homePath + Constants.FILE_SEPARATOR + "bin" + Constants.FILE_SEPARATOR + "classes.dex";
+		String srcPath = homePath + Constants.FILE_SEPARATOR + "src";
+		
+		String[] firstPakageCmdLine = new String[]	{
+			"aapt.exe",
+			"package",
+			"-f",
+			"-M",
+			andriodXmlPath,
+			"-S",
+			resourcePath,
+			"-I",
+			androidJarPath,
+			"-F",
+			pakagePath
+		};
+		
+		ProcessRun.run(firstPakageCmdLine);
+		
+		String[] secondPakageCmdLine = new String[]	{
+			"apkbuilder.bat",
+			realPakagePath,
+			"-z",
+			pakagePath,
+			"-f",
+			classDexPath,
+			"-rf",
+			srcPath
+		};
+		
+		ProcessRun.run(secondPakageCmdLine);
+	}
 }

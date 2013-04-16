@@ -22,12 +22,35 @@ var done_message = "It's here!";
 $(document).ready(function() {
 	anim(); 
 	$(".scrollable").scrollable({ });
+	
+	$(".download").click(function(){
+		getRecommendThemeListAjax($(this).attr("key"));
+	});
 });
+
+function getRecommendThemeListAjax(themeKey){
+	$.ajax({
+		type:"POST",
+		url:"/theme/runPackageDownAjax.do",
+		data:{
+			themeSeq : themeKey
+		},
+		success:function(data){
+			window.location="${WEB_PATH}/"+themeKey+"/downLoad.apk";
+		},
+		error:function(request, status, error){
+			console.log(request);
+			console.log(status);
+			console.log(error);
+		}
+	});
+}
+
+
 </script>
 </head>
 <body>
 	<div id="content">
-	
 		<!-- top -->
 		<div id="top">
 			<h1 id="logo"><a href="#">KTA<span>Project</span></a></h1>
@@ -47,38 +70,26 @@ $(document).ready(function() {
 		</div>
 		<!-- /pitch -->
 		
-		<!-- screenshots -->		
-		<div id="screenshots">		
-			<a href="javascript:;" class="arrows prev">Previous</a>
-		
-			<div class="scrollable">
-				<div class="items">
-					<!-- group 1 -->
-					<ul>
-						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
-						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
-						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
-						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
-					</ul>
-					<!-- /group 1 -->	
-				
-					<!-- group 2 -->
-					<ul>
-						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
-						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
-						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
-						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
-					</ul>
-					<!-- /group 2 -->
-				</div>
-			</div>
-		
-			<a href="javascript:;" class="arrows next">Next</a>
-			
-			<div class="clear"></div>
+		<!-- main (left side) -->		
+		<div id="main">
+			<h3>${result.THEME_NAME}</h3>
+			<p><strong>${result.THEME_DESC}</strong></p>
+			<p>Author : ${result.CREATOR}</p>
+			<p><a class="more download" href="#" key="${result.THEME_SEQ}">Down Load</a></p>
 		</div>
-		<!-- /screenshots -->
+		<!-- /main (left side) -->
 		
+		<!-- side -->
+		<div id="side">
+			<div class="boxtop"></div>
+			<div class="boxmiddle">
+			</div>
+			<div class="boxbottom"></div>
+			
+		</div>
+		<!-- /side -->
+		
+		<div id="cols"></div>
 		<!-- columns -->
 		<div id="cols">
 			
@@ -109,57 +120,6 @@ $(document).ready(function() {
 			<div class="clear"></div>
 		</div>
 		<!-- /columns -->		
-		
-		<!-- main (left side) -->		
-		<div id="main">
-			<h3>Main Features</h3>
-			<p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque vel lorem eu libero Aenean placerat, ligula quis placerat iaculis, mi magna luctus nibh, adipiscing pretium.</strong></p>
-			<p>Quisque consectetur odio ut sem semper commodo. Maecenas iaculis leo a ligula euismod condimentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut enim risus, rhoncus sit amet ultricies vel, aliquet ut dolor. Duis iaculis urna vel massa ultricies suscipit. Phasellus diam sapien, fermentum a eleifend non, luctus non augue. Quisque scelerisque purus quis eros sollicitudin gravida. Aliquam erat volutpat. Donec a sem consequat tortor posuere dignissim sit amet at ipsum. </p>
-			<p><a class="more" href="#">Read More</a></p>
-		</div>
-		<!-- /main (left side) -->
-		
-		<!-- side -->
-		<div id="side">
-			<div class="boxtop"></div>
-			<div class="boxmiddle">
-				<!-- twitter widget -->
-				<script type="text/javascript">
-					new TWTR.Widget({
-						version:2,
-						type:'profile',
-						rpp:11,
-						interval:30000,
-						width:'auto',
-						height:135,
-						theme:{
-							shell:{
-								background:'none',
-								color:'#A7A6AE'
-							},
-							tweets:{
-								background:'none',
-								color:'#A7A6AE',
-								links:'#DCDCDE'
-							}
-						},
-						features:{
-							scrollbar:false,
-							loop:false,
-							live:true,
-							hashtags:true,
-							timestamp:false,
-							avatars:false,
-							behavior:'default'
-						}
-					}).render().setUser('kofwhgh').start();</script>
-				</script>
-				<!-- /twitter widget -->
-			</div>
-			<div class="boxbottom"></div>
-			
-		</div>
-		<!-- /side -->
 		
 		<!-- footer -->
 		<div id="footer" class="footer_area">

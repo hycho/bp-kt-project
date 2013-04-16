@@ -21,9 +21,12 @@ import java.util.Map;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -56,6 +59,8 @@ public class ThemeController {
 	
 	@Resource(name = "themeService")
 	protected ThemeService themeService;
+	
+	protected static final Log log = LogFactory.getLog(ThemeController.class);
 	
 	/**
 	 * 저작 페이지를 보여준다.
@@ -93,17 +98,34 @@ public class ThemeController {
 		return jsonObject.toString();
 	}
 	
-	
+	/**
+	 * 테마의 상세 페이지를 보여줍니다.
+	 * @param request
+	 * @return
+	 * @throws Exception
+	 */
 	@RequestMapping(value = "/theme/viewTheme.do", method = RequestMethod.POST)
-	@ResponseBody
-	public String viewTheme(HttpServletRequest request) throws Exception {
+	public String viewTheme(HttpServletRequest request, ModelMap model) throws Exception {
 		
 		Map<String, Object> parameters = RequestParamDataTrans.transDataMap(request);
 		
 		Map<String, Object> resultMap = themeService.getViewTheme(parameters);
 		
+		model.addAttribute("result", resultMap);
+		
+		return "/kakaotheme/theme/view";
+	}
+	
+	@RequestMapping(value = "/theme/runPackageDownAjax.do", method = RequestMethod.POST)
+	@ResponseBody
+	public String runPackageDownAjax(HttpServletRequest request) throws Exception {
+		
+		Map<String, Object> parameters = RequestParamDataTrans.transDataMap(request);
+		
+		themeService.pakageTheme(parameters);
+		
 		JSONObject jsonObject = new JSONObject();
-		jsonObject.put("data", resultMap);
+		jsonObject.put("data", "success");
 		
 		return jsonObject.toString();
 	}

@@ -50,7 +50,7 @@ public class ThemeDao extends EgovAbstractDAO {
     }
 
     public List<Map<String, Object>> selectRecommendList(Map<String, Object> parameters) throws Exception {
-        return getSqlMapClientTemplate().queryForList("themeDAO.selectAllTheme", parameters);
+        return getSqlMapClientTemplate().queryForList("themeDAO.selectBestCntTheme", parameters);
     }
     
     public Map<String, Object> viewTheme(Map<String, Object> parameters) throws Exception {

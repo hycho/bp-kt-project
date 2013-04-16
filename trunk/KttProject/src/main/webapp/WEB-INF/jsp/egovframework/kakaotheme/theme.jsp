@@ -27,7 +27,6 @@ $(document).ready(function() {
 </head>
 <body>
 	<div id="content">
-	
 		<!-- top -->
 		<div id="top">
 			<h1 id="logo"><a href="#">KTA<span>Project</span></a></h1>

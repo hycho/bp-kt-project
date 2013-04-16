@@ -38,5 +38,11 @@ public interface ThemeService {
 	public List getThemeList() throws Exception;
 	public List<Map<String, Object>> getRecommendThemeList(Map<String, Object> parameters) throws Exception;
 	public Map<String, Object> getViewTheme(Map<String, Object> parameters) throws Exception;
+	/**
+	 * Theme를 패키징 하고 패키징된 테마를 배치하고 배치된 테마의 주소를 String으로 넘겨줍니다.
+	 * @param parameters
+	 * @throws Exception
+	 */
+	public void pakageTheme(Map<String, Object> parameters) throws Exception;
 	
 }
