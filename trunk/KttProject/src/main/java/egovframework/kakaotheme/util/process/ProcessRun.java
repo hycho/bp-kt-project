@@ -12,34 +12,11 @@ public class ProcessRun {
 	
 	protected static final Log log = LogFactory.getLog(ProcessRun.class);
 	
-	public static void run(String cmdLine) throws Exception{
-		ProcessBuilder processBuilder = new ProcessBuilder(cmdLine);
-		processBuilder.redirectErrorStream(true);
-		Process process = null;
-		
-		try{
-			process = processBuilder.start();
-		}catch(Exception e){
-			e.printStackTrace();
-			process.destroy();
-		}
-		
-		outLogInputStream(process.getInputStream());
-		
-		try{
-			process.waitFor();
-		}catch(Exception e){
-			e.printStackTrace();
-		}
-		
-		if(process.exitValue() != 0){
-			log.error("변환중 Error 발생");
-			throw new Exception();
-		}
-		
-		process.destroy();
-	}
-	
+	/**
+	 * 콘솔화면에서 호출될 명령어를 실행하고, 실행되면서 발생되는 로그를 확인 캣치 할 수 있는 함수 입니다.
+	 * @param cmdLine
+	 * @throws Exception
+	 */
 	public static void run(String[] cmdLine) throws Exception{
 		ProcessBuilder processBuilder = new ProcessBuilder(cmdLine);
 		processBuilder.redirectErrorStream(true);
@@ -61,6 +38,7 @@ public class ProcessRun {
 		
 		if(process.exitValue() != 0){
 			log.error("변환중 Error 발생");
+			throw new Exception();
 		}
 		
 		process.destroy();
