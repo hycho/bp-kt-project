@@ -88,38 +88,123 @@ function getRecommendThemeListAjax(themeKey){
 			
 		</div>
 		<!-- /side -->
-		
 		<div id="cols"></div>
 		<!-- columns -->
 		<div id="cols">
-			
 			<!-- left column -->
 			<div class="col">
-				<h3>Robust and Modular</h3>
-				<p>Quisque scelerisque purus quis eros sollicitudin gravida. Aliquam erat volutpat. Donec a sem consequat tortor posuere dignissim sit amet at ipsum.</p>
-				<p><a class="more" href="#">Read More</a></p>
+				<h3>General properties</h3>
+				<p>Future setting item List. Thumbnail, Splash image, Splash thumbnail, List Item Font Color, List Item Basic Background ...</p>
+				<p><a class="more" href="#">Setting</a></p>
 			</div>
 			<!-- /left column -->
 			
 			<!-- middle column -->
 			<div class="col">
-				<h3>Simple to Use</h3>
-				<p>Quisque scelerisque purus quis eros sollicitudin gravida. Aliquam erat volutpat. Donec a sem consequat tortor posuere dignissim sit amet at ipsum.</p>
-				<p><a class="more" href="#">Read More</a></p>
+				<h3>Chatting Room properties</h3>
+				<p>Future setting item list. Chatting room thumbnail, Chatting room background color path, Bottom input bar background ...</p>
+				<p><a class="more" href="#">Setting</a></p>
 			</div>
 			<!-- /middle column -->
 			
 			<!-- right column -->
 			<div class="col last">
-				<h3>Interactive and Fun</h3>
-				<p>Quisque scelerisque purus quis eros sollicitudin gravida. Aliquam erat volutpat. Donec a sem consequat tortor posuere dignissim sit amet at ipsum.</p>
-				<p><a class="more" href="#">Read More</a></p>
+				<h3>Main tab properties</h3>
+				<p>Future setting item list. Thumbnail, Tab Font, Friend tab, Chatting tab, Friend recommend icon, Look tab icon ...</p>
+				<p><a class="more" href="#">Setting</a></p>
 			</div>
 			<!-- /right column -->
 			
 			<div class="clear"></div>
 		</div>
 		<!-- /columns -->		
+		<!-- columns -->
+		<div id="cols">
+			<!-- left column -->
+			<div class="col">
+				<h3>Media popup properties</h3>
+				<p>Future setting item list. Thumbnail, Popup background, Picture album icon, Picture shoot icon, voice message icon ...</p>
+				<p><a class="more" href="#">Setting</a></p>
+			</div>
+			<!-- /left column -->
+			
+			<!-- middle column -->
+			<div class="col">
+				<h3>Chatting plus properties</h3>
+				<p>Future setting item list. Chatting plus thumbnail, Chatting plus bg color.</p>
+				<p><a class="more" href="#">Setting</a></p>
+			</div>
+			<!-- /middle column -->
+			
+			<!-- right column -->
+			<div class="col last">
+				<h3>Chatting list properties</h3>
+				<p>Future setting item list. Chatting thumbnail, Chatting list background, Create chatting room menu icon ...</p>
+				<p><a class="more" href="#">Setting</a></p>
+			</div>
+			<!-- /right column -->
+			
+			<div class="clear"></div>
+		</div>
+		<!-- /columns -->
+		<!-- columns -->
+		<div id="cols">
+			<!-- left column -->
+			<div class="col">
+				<h3>Friend list properties</h3>
+				<p>Future setting item list. Friend list thumbnail, Friend list background color, Friend list bubble background color ...</p>
+				<p><a class="more" href="#">Setting</a></p>
+			</div>
+			<!-- /left column -->
+			
+			<!-- middle column -->
+			<div class="col">
+				<h3>Mini profile properties</h3>
+				<p>Future setting item List. Thumbnail, Mini profile background color, Top button area background path, Gift backgound color ...</p>
+				<p><a class="more" href="#">Setting</a></p>
+			</div>
+			<!-- /middle column -->
+			
+			<!-- right column -->
+			<div class="col last">
+				<h3>Search freind properties</h3>
+				<p>Future setting item List. Thumbnail, Friend recommend list background path, Kakaotalk alert message back ground path ...</p>
+				<p><a class="more" href="#">Setting</a></p>
+			</div>
+			<!-- /right column -->
+			
+			<div class="clear"></div>
+		</div>
+		<!-- /columns -->
+		<!-- columns -->
+		<div id="cols">
+			<!-- left column -->
+			<div class="col">
+				<h3>Setup properties</h3>
+				<p>Future setting item List. Setup Thumbnail, Setup backgound image path ...</p>
+				<p><a class="more" href="#">Setting</a></p>
+			</div>
+			<!-- /left column -->
+			
+			<!-- middle column -->
+			<div class="col">
+				<h3>Lock properties</h3>
+				<p>Future setting item List. Thumbnail, Password font color, Password bottom text font color, password input field status path ...</p>
+				<p><a class="more" href="#">Setting</a></p>
+			</div>
+			<!-- /middle column -->
+			
+			<!-- right column -->
+			<div class="col last">
+				<h3>Look properties</h3>
+				<p>Future setting item List. Thumbnail, Item background color, Account item icon path, Setup icon path, Gift item icon path ...</p>
+				<p><a class="more" href="#">Setting</a></p>
+			</div>
+			<!-- /right column -->
+			
+			<div class="clear"></div>
+		</div>
+		<!-- /columns -->
 		
 		<!-- footer -->
 		<div id="footer" class="footer_area">

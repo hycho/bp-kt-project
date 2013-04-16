@@ -109,8 +109,8 @@ function getRecommendThemeListAjax(){
 			
 			<!-- left column -->
 			<div class="col">
-				<h3>Robust and Modular</h3>
-				<p>Quisque scelerisque purus quis eros sollicitudin gravida. Aliquam erat volutpat. Donec a sem consequat tortor posuere dignissim sit amet at ipsum.</p>
+				<h3>Sharing & Store</h3>
+				<p>Mobile/PC상에서 직접 저작하신 테마를 세계의 모든 사람들과 공유할 수 있습니다. 또한 무료로 배포하거나 사고 팔 수 있습니다.</p>
 				<p><a class="more" href="#">Read More</a></p>
 			</div>
 			<!-- /left column -->
@@ -118,15 +118,15 @@ function getRecommendThemeListAjax(){
 			<!-- middle column -->
 			<div class="col">
 				<h3>Simple to Use</h3>
-				<p>Quisque scelerisque purus quis eros sollicitudin gravida. Aliquam erat volutpat. Donec a sem consequat tortor posuere dignissim sit amet at ipsum.</p>
+				<p>쉽게 저작할 수 있고 남녀노소 누구나 자신만의 테마를 저작/설치/공유를 최대한 쉽도록 만들었습니다.</p>
 				<p><a class="more" href="#">Read More</a></p>
 			</div>
 			<!-- /middle column -->
 			
 			<!-- right column -->
 			<div class="col last">
-				<h3>Interactive and Fun</h3>
-				<p>Quisque scelerisque purus quis eros sollicitudin gravida. Aliquam erat volutpat. Donec a sem consequat tortor posuere dignissim sit amet at ipsum.</p>
+				<h3>Beautiful & Fantastic</h3>
+				<p>아름답고 판타스틱한 자신만의 테마를 만들어 보세요. 만드신 테마는 카카오톡에서 멋지게 동작을 합니다.</p>
 				<p><a class="more" href="#">Read More</a></p>
 			</div>
 			<!-- /right column -->
@@ -137,10 +137,14 @@ function getRecommendThemeListAjax(){
 		
 		<!-- main (left side) -->		
 		<div id="main">
-			<h3>Main Features</h3>
-			<p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque vel lorem eu libero Aenean placerat, ligula quis placerat iaculis, mi magna luctus nibh, adipiscing pretium.</strong></p>
-			<p>Quisque consectetur odio ut sem semper commodo. Maecenas iaculis leo a ligula euismod condimentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut enim risus, rhoncus sit amet ultricies vel, aliquet ut dolor. Duis iaculis urna vel massa ultricies suscipit. Phasellus diam sapien, fermentum a eleifend non, luctus non augue. Quisque scelerisque purus quis eros sollicitudin gravida. Aliquam erat volutpat. Donec a sem consequat tortor posuere dignissim sit amet at ipsum. </p>
-			<p><a class="more" href="#">Read More</a></p>
+			<h3>Try new things!</h3>
+			<p><strong>시도 해 보세요. 자기만의 새로운 것을 만드는 것은 인간의 본성입니다. 자신이 원하는 것을 만들어 보세요. 대박을 터트릴지 모릅니다.</strong></p>
+			<p>
+				저희는 도전적이고, 활력 넘치는 삶을 살려고 합니다. 제가 말씀드렸듯이, 도전이란 위대합니다. 저는 어떠한 일도 도전이라고 생각합니다. 하는 일이 어렵지만 아주 도전적이에요.
+				실패 하더라도 도전 해 볼만하다. 그것은 도전이고 난 도전하는것을 사랑한다. 순간을 사랑하세요, 그러면 그 순간의 에너지가 퍼져나갈 겁니다.
+				결국 삶이란 여러분이 되고자 했던 완벽한 인격체로 거듭나는 것입니다. 낙관주의는 성공으로 인도하는 믿음이다. 희망과 자신감이 없으면 아무것도 이루어질 수 없다.
+			</p>
+			<p><a class="more" href="#">Import</a></p>
 		</div>
 		<!-- /main (left side) -->
 		
