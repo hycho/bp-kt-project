@@ -18,8 +18,7 @@
 Cufon.replace('h1,h2,h3');
 Counter(new Date("Oct 20 2012 12:00:00 UTC"));
 
-var done_message = "It's here!";
-
+var done_message = "Now Try This!";
 
 $(document).ready(function() {
 	anim(); 
@@ -72,7 +71,7 @@ function getRecommendThemeListAjax(){
 	<div id="content">
 		<!-- top -->
 		<div id="top">
-			<h1 id="logo"><a href="#">KTA<span>Project</span></a></h1>
+			<h1 id="logo"><a href="#">Theme Authoring<span> Project</span></a></h1>
 			<ul id="menu">
 				<li><a class="current" href="/page/main.do">Home</a></li>
 				<li><a href="/page/theme.do">Theme</a></li>
