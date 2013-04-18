@@ -171,7 +171,7 @@ h3 {
 /* screenshot items */
 #screenshots .items ul{ list-style: none; float: left; }
 #screenshots .items ul li { float: left; }		
-#screenshots .items ul li a{ float: left; width: 172px; height: 103px; padding: 10px 0 0 0px; margin: 0 25px 0 0; overflow: hidden; background: url(../../../images/egovframework/kakaotheme/main/thumb_frame.png) no-repeat; }
+#screenshots .items ul li a{ float: left; width: 172px; height: 103px; padding: 10px 0 0 10px; margin: 0 25px 0 0; overflow: hidden; background: url(../../../images/egovframework/kakaotheme/main/thumb_frame.png) no-repeat; }
 
 /* screenshot arrows */
 #screenshots a.arrows { display: block; width: 12px; height: 21px; text-indent: -999999px; background: url(../../../images/egovframework/kakaotheme/main/arrows.png) no-repeat; top: 50px; }

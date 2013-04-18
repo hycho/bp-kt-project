@@ -36,6 +36,7 @@ function getRecommendThemeListAjax(){
 		success:function(data){
 			var jsonData = $.parseJSON(data);
 			var themeItemHtml = '<ul>';
+			var jsonDataLength = jsonData.data.length;
 			
 			$.each(jsonData.data, function(index, map){
 				themeItemHtml += '<li>'+
@@ -43,9 +44,21 @@ function getRecommendThemeListAjax(){
 								 '<img width="171px" height="100px" src="${WEB_PATH}/'+map.THEME_SEQ+'/thumbnail.jpg" alt="Image" />'+
 								 '</a>'+
 								 '</li>';
+								 
+				if((index+1)%4 == 0){								 
+					themeItemHtml += '</ul>';
+					if((index+1) != jsonDataLength){
+						themeItemHtml += '<ul>';
+					}
+				}
+				
+				if((index+1) == jsonDataLength){								 
+					themeItemHtml += '</ul>';
+				}
 			});
 			
-			themeItemHtml += '</ul>';
+			
+			
 			$("#recommendItems").append(themeItemHtml);
 			
 			$(".recommendTheme").click(function(){
