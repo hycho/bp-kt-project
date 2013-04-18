@@ -46,46 +46,13 @@ $(document).ready(function() {
 		</div>
 		<!-- /pitch -->
 		
-		<!-- screenshots -->		
-		<div id="screenshots">		
-			<a href="javascript:;" class="arrows prev">Previous</a>
-		
-			<div class="scrollable">
-				<div class="items">
-					<!-- group 1 -->
-					<ul>
-						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
-						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
-						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
-						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
-					</ul>
-					<!-- /group 1 -->	
-				
-					<!-- group 2 -->
-					<ul>
-						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
-						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
-						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
-						<li><a href="#" title="Image Caption"><img src="/images/egovframework/kakaotheme/main/screenshots/thumb1.jpg" alt="Image" /></a></li>
-					</ul>
-					<!-- /group 2 -->
-				</div>
-			</div>
-		
-			<a href="javascript:;" class="arrows next">Next</a>
-			
-			<div class="clear"></div>
-		</div>
-		<!-- /screenshots -->
-		
 		<!-- columns -->
 		<div id="cols">
 			
 			<!-- left column -->
 			<div class="col">
-				<h3>Robust and Modular</h3>
-				<p>Quisque scelerisque purus quis eros sollicitudin gravida. Aliquam erat volutpat. Donec a sem consequat tortor posuere dignissim sit amet at ipsum.</p>
-				<p><a class="more" href="#">Read More</a></p>
+				<p><img width="220px" height="100px" src="${WEB_PATH}/1/thumbnail.jpg" alt="Image" /></p>
+				<p><a class="more" href="#">다운로드</a></p>
 			</div>
 			<!-- /left column -->
 			
@@ -109,14 +76,7 @@ $(document).ready(function() {
 		</div>
 		<!-- /columns -->		
 		
-		<!-- main (left side) -->		
-		<div id="main">
-			<h3>Main Features</h3>
-			<p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit quisque vel lorem eu libero Aenean placerat, ligula quis placerat iaculis, mi magna luctus nibh, adipiscing pretium.</strong></p>
-			<p>Quisque consectetur odio ut sem semper commodo. Maecenas iaculis leo a ligula euismod condimentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut enim risus, rhoncus sit amet ultricies vel, aliquet ut dolor. Duis iaculis urna vel massa ultricies suscipit. Phasellus diam sapien, fermentum a eleifend non, luctus non augue. Quisque scelerisque purus quis eros sollicitudin gravida. Aliquam erat volutpat. Donec a sem consequat tortor posuere dignissim sit amet at ipsum. </p>
-			<p><a class="more" href="#">Read More</a></p>
-		</div>
-		<!-- /main (left side) -->
+		
 		
 		<!-- side -->
 		<div id="side">

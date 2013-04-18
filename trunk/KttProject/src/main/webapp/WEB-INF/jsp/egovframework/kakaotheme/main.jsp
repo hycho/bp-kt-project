@@ -24,7 +24,15 @@ $(document).ready(function() {
 	anim(); 
 	$(".scrollable").scrollable({ });
 	getRecommendThemeListAjax();
+	
+	evt_clickImportTheme();
 });
+
+function evt_clickImportTheme(){
+	$("#btnImportTheme").click(function(){
+		$("#importTheme").trigger("click");
+	});
+}
 
 function getRecommendThemeListAjax(){
 	$.ajax({
@@ -78,6 +86,9 @@ function getRecommendThemeListAjax(){
 </script>
 </head>
 <body>
+	<!-- File Import -->
+	<input type="file" id="importTheme" name="importTheme" style="display:none" />
+	
 	<form id="viewThemeForm" name="viewThemeForm" action="/theme/viewTheme.do" method="post">
 		<input type="hidden" id="themeSeq" name="themeSeq" value=""/>
 	</form>
@@ -156,7 +167,7 @@ function getRecommendThemeListAjax(){
 				실패 하더라도 도전 해 볼만하다. 그것은 도전이고 난 도전하는것을 사랑한다. 순간을 사랑하세요, 그러면 그 순간의 에너지가 퍼져나갈 겁니다.
 				결국 삶이란 여러분이 되고자 했던 완벽한 인격체로 거듭나는 것입니다. 낙관주의는 성공으로 인도하는 믿음이다. 희망과 자신감이 없으면 아무것도 이루어질 수 없다.
 			</p>
-			<p><a class="more" href="#">Import</a></p>
+			<p><a class="more" id="btnImportTheme">Import</a></p>
 		</div>
 		<!-- /main (left side) -->
 		

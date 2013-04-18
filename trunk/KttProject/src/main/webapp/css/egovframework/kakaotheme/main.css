@@ -19,7 +19,8 @@ body {
 /* typography */
 a { 
 	color: #3F3E44;
-	text-decoration: none; 
+	text-decoration: none;
+	cursor: pointer; 
 }
 a:hover {
 	color: #000;
