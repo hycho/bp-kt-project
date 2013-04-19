@@ -5,6 +5,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Theme</title>
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/egovframework/kakaotheme/main.css'/>"/>
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/egovframework/kakaotheme/paginate.css'/>"/>
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/egovframework/kakaotheme/look.css'/>"/>
+
 <script src="<c:url value='/script/egovframework/kakaotheme/main/jquery-1.8.2.js'/>"></script>
 <script src="<c:url value='/script/egovframework/kakaotheme/main/cufon-yui.js'/>"></script>
 <script src="<c:url value='/script/egovframework/kakaotheme/main/jquery.fancybox-1.3.2.pack.js'/>"></script>
@@ -48,10 +51,10 @@ $(document).ready(function() {
 		
 		<!-- columns -->
 		<div id="cols">
-			
-			<!-- left column -->
+		<!-- left column -->
 			<div class="col">
-				<p><img width="220px" height="100px" src="${WEB_PATH}/1/thumbnail.jpg" alt="Image" /></p>
+				<h3>Simple to Use</h3>
+				<p><img width="230px" height="200px" src="${WEB_PATH}/1/thumbnail.jpg" alt="Image" class="cursor_hand"/></p>
 				<p><a class="more" href="#">다운로드</a></p>
 			</div>
 			<!-- /left column -->
@@ -59,66 +62,130 @@ $(document).ready(function() {
 			<!-- middle column -->
 			<div class="col">
 				<h3>Simple to Use</h3>
-				<p>Quisque scelerisque purus quis eros sollicitudin gravida. Aliquam erat volutpat. Donec a sem consequat tortor posuere dignissim sit amet at ipsum.</p>
-				<p><a class="more" href="#">Read More</a></p>
+				<p><img width="230px" height="200px" src="${WEB_PATH}/1/thumbnail.jpg" alt="Image" class="cursor_hand"/></p>
+				<p><a class="more" href="#">다운로드</a></p>
 			</div>
 			<!-- /middle column -->
 			
 			<!-- right column -->
 			<div class="col last">
 				<h3>Interactive and Fun</h3>
-				<p>Quisque scelerisque purus quis eros sollicitudin gravida. Aliquam erat volutpat. Donec a sem consequat tortor posuere dignissim sit amet at ipsum.</p>
-				<p><a class="more" href="#">Read More</a></p>
+				<p><img width="230px" height="200px" src="${WEB_PATH}/1/thumbnail.jpg" alt="Image" class="cursor_hand"/></p>
+				<p><a class="more" href="#">다운로드</a></p>
 			</div>
 			<!-- /right column -->
 			
 			<div class="clear"></div>
 		</div>
-		<!-- /columns -->		
+		<!-- /columns -->
 		
-		
-		
-		<!-- side -->
-		<div id="side">
-			<div class="boxtop"></div>
-			<div class="boxmiddle">
-				<!-- twitter widget -->
-				<script type="text/javascript">
-					new TWTR.Widget({
-						version:2,
-						type:'profile',
-						rpp:11,
-						interval:30000,
-						width:'auto',
-						height:135,
-						theme:{
-							shell:{
-								background:'none',
-								color:'#A7A6AE'
-							},
-							tweets:{
-								background:'none',
-								color:'#A7A6AE',
-								links:'#DCDCDE'
-							}
-						},
-						features:{
-							scrollbar:false,
-							loop:false,
-							live:true,
-							hashtags:true,
-							timestamp:false,
-							avatars:false,
-							behavior:'default'
-						}
-					}).render().setUser('kofwhgh').start();</script>
-				</script>
-				<!-- /twitter widget -->
+		<!-- columns -->
+		<div id="cols">
+		<!-- left column -->
+			<div class="col">
+				<h3>Simple to Use</h3>
+				<p><img width="230px" height="200px" src="${WEB_PATH}/1/thumbnail.jpg" alt="Image" class="cursor_hand"/></p>
+				<p><a class="more" href="#">다운로드</a></p>
 			</div>
-			<div class="boxbottom"></div>
+			<!-- /left column -->
 			
+			<!-- middle column -->
+			<div class="col">
+				<h3>Simple to Use</h3>
+				<p><img width="230px" height="200px" src="${WEB_PATH}/1/thumbnail.jpg" alt="Image" class="cursor_hand"/></p>
+				<p><a class="more" href="#">다운로드</a></p>
+			</div>
+			<!-- /middle column -->
+			
+			<!-- right column -->
+			<div class="col last">
+				<h3>Interactive and Fun</h3>
+				<p><img width="230px" height="200px" src="${WEB_PATH}/1/thumbnail.jpg" alt="Image" class="cursor_hand"/></p>
+				<p><a class="more" href="#">다운로드</a></p>
+			</div>
+			<!-- /right column -->
+			
+			<div class="clear"></div>
 		</div>
-		<!-- /side -->
+		<!-- /columns -->
+		
+		<!-- columns -->
+		<div id="cols">
+		<!-- left column -->
+			<div class="col">
+				<h3>Simple to Use</h3>
+				<p><img width="230px" height="200px" src="${WEB_PATH}/1/thumbnail.jpg" alt="Image" class="cursor_hand"/></p>
+				<p><a class="more" href="#">다운로드</a></p>
+			</div>
+			<!-- /left column -->
+			
+			<!-- middle column -->
+			<div class="col">
+				<h3>Simple to Use</h3>
+				<p><img width="230px" height="200px" src="${WEB_PATH}/1/thumbnail.jpg" alt="Image" class="cursor_hand"/></p>
+				<p><a class="more" href="#">다운로드</a></p>
+			</div>
+			<!-- /middle column -->
+			
+			<!-- right column -->
+			<div class="col last">
+				<h3>Interactive and Fun</h3>
+				<p><img width="230px" height="200px" src="${WEB_PATH}/1/thumbnail.jpg" alt="Image" class="cursor_hand"/></p>
+				<p><a class="more" href="#">다운로드</a></p>
+			</div>
+			<!-- /right column -->
+			
+			<div class="clear"></div>
+		</div>
+		<!-- /columns -->
+		
+		<!-- columns -->
+		<div id="cols">
+		<!-- left column -->
+			<div class="col">
+				<h3>Simple to Use</h3>
+				<p><img width="230px" height="200px" src="${WEB_PATH}/1/thumbnail.jpg" alt="Image" class="cursor_hand"/></p>
+				<p><a class="more" href="#">다운로드</a></p>
+			</div>
+			<!-- /left column -->
+			
+			<!-- middle column -->
+			<div class="col">
+				<h3>Simple to Use</h3>
+				<p><img width="230px" height="200px" src="${WEB_PATH}/1/thumbnail.jpg" alt="Image" class="cursor_hand"/></p>
+				<p><a class="more" href="#">다운로드</a></p>
+			</div>
+			<!-- /middle column -->
+			
+			<!-- right column -->
+			<div class="col last">
+				<h3>Interactive and Fun</h3>
+				<p><img width="230px" height="200px" src="${WEB_PATH}/1/thumbnail.jpg" alt="Image" class="cursor_hand"/></p>
+				<p><a class="more" href="#">다운로드</a></p>
+			</div>
+			<!-- /right column -->
+			
+			<div class="clear"></div>
+		</div>
+		<!-- /columns -->
+			
+		
+		<div class="paginate mt_margin50">
+			<a href="#" class="pre_end">맨앞</a>
+			<a href="#" class="pre">이전</a>
+			<a href="#">11</a>
+			<strong>12</strong>
+			<a href="#">13</a>
+			<a href="#">14</a>
+			<a href="#">15</a>
+			<a href="#">16</a>
+			<a href="#">17</a>
+			<a href="#">18</a>
+			<a href="#">19</a>
+			<a href="#">20</a>
+			<a href="#" class="next">다음</a>
+			<a href="#" class="next_end">맨뒤</a>
+		</div>
 		
 		<!-- footer -->
 		<div id="footer" class="footer_area">

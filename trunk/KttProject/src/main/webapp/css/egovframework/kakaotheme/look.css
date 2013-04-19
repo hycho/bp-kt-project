@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+/* Page UI Object */
+.mt_margin10 {margin-top:-10px;}
+.mt_margin20 {margin-top:-20px;}
+.mt_margin30 {margin-top:-30px;}
+.mt_margin40 {margin-top:-40px;}
+.mt_margin50 {margin-top:-50px;}
+
+.cursor_hand {cursor:pointer;}

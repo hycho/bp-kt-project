@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+/* Page UI Object */
+.paginate{padding:15px 0;text-align:center}
+.paginate a,.paginate strong{display:inline-block;_position:relative;margin-left:-7px;padding:3px 8px 1px 7px;border-right:1px solid #ccc;border-left:1px solid #ccc;background:#fff;color:#313031;font-family:'돋움',Dotum,'굴림',Gulim, AppleGothic, Sans-serif;font-size:12px;font-weight:bold;line-height:normal;text-decoration:none}
+.paginate strong{color:#ff8600 !important}
+.paginate a:hover{background:#f7f7f7}
+.paginate a.pre{padding:3px 8px 1px 16px;border:none;background:url(http://static.naver.com/common/paginate/bu_pg1_l1.gif) no-repeat 8px 6px !important;font-weight:normal}
+.paginate a.pre_end{padding:3px 8px 1px 16px;border:none;border-right:1px solid #ccc;background:url(http://static.naver.com/common/paginate/bu_pg1_l2.gif) no-repeat 4px 6px !important;font-weight:normal}
+.paginate a.next{padding:3px 16px 1px 8px;border:none;background:url(http://static.naver.com/common/paginate/bu_pg1_r1.gif) no-repeat 37px 6px !important;font-weight:normal}
+.paginate a.next_end{padding:3px 16px 1px 8px;border:none;border-left:1px solid #ccc;background:url(http://static.naver.com/common/paginate/bu_pg1_r2.gif) no-repeat 37px 6px !important;font-weight:normal}
+/* Page UI Object */
