@@ -13,12 +13,8 @@
 	<!-- CNT 갯수에 따라서 최고 평가가 높은 순서대로 값을 가져옵니다. -->
 	<select id="themeDAO.selectBestCntTheme" parameterClass="java.util.HashMap" resultClass="java.util.HashMap">
 		<![CDATA[
-			SELECT ROWNUM rnum, a.* FROM
-			(
-			  SELECT * FROM tb_theme
-			  ORDER BY recommend_cnt DESC, rowid
-			) a
-			WHERE ROWNUM <= #cnt#
+			SELECT *
+			FROM TB_THEME
 		]]>
 	</select>
 	

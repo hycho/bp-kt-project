@@ -5,6 +5,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Theme</title>
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/egovframework/kakaotheme/main.css'/>"/>
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/egovframework/kakaotheme/look.css'/>"/>
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/egovframework/kakaotheme/loading1.css'/>"/>
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/egovframework/kakaotheme/layer1.css'/>"/>
+
 <script src="<c:url value='/script/egovframework/kakaotheme/main/jquery-1.8.2.js'/>"></script>
 <script src="<c:url value='/script/egovframework/kakaotheme/main/cufon-yui.js'/>"></script>
 <script src="<c:url value='/script/egovframework/kakaotheme/main/jquery.fancybox-1.3.2.pack.js'/>"></script>
@@ -64,8 +68,6 @@ function getRecommendThemeListAjax(){
 					themeItemHtml += '</ul>';
 				}
 			});
-			
-			
 			
 			$("#recommendItems").append(themeItemHtml);
 			
@@ -218,6 +220,24 @@ function getRecommendThemeListAjax(){
 			<p>&copy; 2013 <a href="#">KTA Product</a> &middot; All Rights Reserved &middot; <a title="Good Developer" href="http://babayetustudy.tistory.com//">Cho Ho Young</a></p>
 		</div>
 		<!-- /footer -->
+	</div>
+
+	<div class="mw_layer open">
+		<div class="bg"></div>
+		<div class="mw_layer_body">
+			<a href="#" title="로그인 레이어 닫기" class="close">X</a>
+			<fieldset>
+			    <div class="ly_cont pb_margin30 pl_margin90">
+			        <div class="ly_body">
+			            <p class="dsc_loading">파일 Import 중...</p>
+			            <img src="http://static.naver.com/common/loading/load_b01_01.gif" width="150" height="13" alt="로딩중">
+			        </div>
+			    </div>
+				<ul class="help">
+					<li class="first"><a href="#">취소</a></li>
+				</ul>
+			</fieldset>
+		</div>
 	</div>
 </body>
 </html>

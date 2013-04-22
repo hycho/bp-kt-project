@@ -1,29 +1,10 @@
 /**
- * byte사이즈를 용량에 따라 kb, mb, gb, tb, pb 까지 변환해서 값을 리턴합니다.
- * @param byteSize : byte 사이즈 입니다.
- * @param type : size[byte, kb, mb등 type이 붙어서 반환 되지 않습니다.], type & non [byte, kb, mb..등이 자동으로 붙어서 반환 됩니다.]
- * @returns
+ * HTML5 전용 UPLOAD ie10+, chorme, firefox
+ * 필요 스크립트 convertByte.js
+ * @param file
+ * @param url
  */
-function convertByteSize(byteSize, type){
-	var arrByteType = ['bytes', 'KB', 'MB', 'GB', 'TB', 'PB'];
-	var byteLine = Math.floor(Math.log(byteSize)/Math.log(1024));
-	if(byteLine >= arrByteType.length){
-		byteLine = arrByteType.length - 1;
-	}
-	
-	if(byteLine == "-Infinity"){
-		return "0 " + arrByteType[0];
-	}else{
-		if(type == "size"){
-			return (byteSize/Math.pow(1024, Math.floor(byteLine))).toFixed(1);
-		}else{
-			return (byteSize/Math.pow(1024, Math.floor(byteLine))).toFixed(1)+" "+arrByteType[byteLine];
-		}
-	}
-}
-
-
-function fileUploadProcess(file){
+function fileUploadProcess(file, url){
 	var startTime = new Date();
 	var transmission_speed = 0;
 	
@@ -54,36 +35,14 @@ function fileUploadProcess(file){
     }
 	
 	xhr.addEventListener("load", function(data){
-		var metadata = jQuery.parseJSON(data.currentTarget.responseText);
-		var mimetype = metadata.mimetype;
-		
-		$("#<portlet:namespace />rpd_projectThumbnail").hide();
-    	$("#<portlet:namespace />settingmetadata").show();
-    	$("#<portlet:namespace />settingmetadatabtng").show();
-    	$("#<portlet:namespace />metadatatitle").val(metadata.filename);
-    	$("#<portlet:namespace />metadatasubject").val(metadata.subject);
-    	$("#<portlet:namespace />metadatadescription").val(metadata.description!=null?metadata.description.en_US:"");
-    	$("#<portlet:namespace />metadatamimetype").val(getTypeName(metadata.mimetype));
-    	$("#<portlet:namespace />metadatafullmimetype").val(metadata.mimetype);
-    	$("#<portlet:namespace />metadatafilename").val(metadata.filename);
-    	$("#<portlet:namespace />metadatacreateddate").val(metadata.createdate);
-    	$("#<portlet:namespace />metadatacreator").val(metadata.creator);
-    	$("#<portlet:namespace />metadatatempfilename").val(metadata.tempfilename);
-    	$("#<portlet:namespace />metadataauthor").val(metadata.author);
-    	
-    	<portlet:namespace />setMimetypeProp(mimetype, metadata);
-    	
-    	$("#<portlet:namespace />progressBarLayerGroup").fadeOut();
-    	
-    	$("#<portlet:namespace />titleregistlayer").hide();
-    	$("#<portlet:namespace />tabregistlayer").hide();
-    	$("#<portlet:namespace />rpd_clickfile").hide();
-    	
-    	layerFadeIn($("#<portlet:namespace />registorLayerGroup"), $("#<portlet:namespace />registorLayer"));
+		console.log(data);
 	}, false);
+	
 	xhr.addEventListener("error", function(){
 		alert("Error");
-	}, false);  
-	xhr.open("POST", "${alfresco_url}/wcservice/ubion/lcms/piece/beforeregist?userId=${USER_EMAIL}");
-	xhr.send(fd);
+	}, false);
+	
+	xhr.open("POST", url);
+	
+	xhr.send(fileFormData);
 }
