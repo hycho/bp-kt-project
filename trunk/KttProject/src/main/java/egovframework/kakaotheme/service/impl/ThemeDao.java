@@ -57,8 +57,8 @@ public class ThemeDao extends EgovAbstractDAO {
         return (Map<String, Object>) getSqlMapClientTemplate().queryForObject("themeDAO.viewTheme", parameters);
     }
     
-    public Map<String, Object> importTheme(Map<String, Object> parameters) throws Exception {
-        return (Map<String, Object>) getSqlMapClientTemplate().queryForObject("themeDAO.importTheme", parameters);
+    public void importTheme() throws Exception {
+        getSqlMapClientTemplate().insert("themeDAO.importTheme");
     }
     
 }

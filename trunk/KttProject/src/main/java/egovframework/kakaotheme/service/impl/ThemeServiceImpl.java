@@ -125,6 +125,8 @@ public class ThemeServiceImpl implements ThemeService{
 		Map<String, MultipartFile> files = request.getFileMap();
 		CommonsMultipartFile cmf = (CommonsMultipartFile) files.get("importFile");
 		
+		themeDao.importTheme();
+		
 		//cmf.getInputStream();
 		
 	}

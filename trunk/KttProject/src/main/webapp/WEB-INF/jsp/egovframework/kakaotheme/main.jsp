@@ -91,12 +91,17 @@ function importThemeFile(object){
 	
 	var themeFormData = new FormData();
 	themeFormData.append("importFile",files[0]);
-		
+	
+	$("#loading_layer").show();
+	
 	$.ajax({
 		type:"POST",
 		url:"/theme/importThemeAjax.do",
 		data: themeFormData,
+		contentType: false,
+	    processData: false,
 		success:function(data){
+			$("#loading_layer").hide();
 			console.log("Import theme file success Data : " + data);
 		},
 		error:function(request, status, error){
