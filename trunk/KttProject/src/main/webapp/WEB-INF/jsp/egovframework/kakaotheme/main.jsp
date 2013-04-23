@@ -85,11 +85,33 @@ function getRecommendThemeListAjax(){
 	});
 }
 
+function importThemeFile(object){
+	console.log("### Start main.jsp importThemeFile function ###");
+	var files = object.files;
+	
+	var themeFormData = new FormData();
+	themeFormData.append("importFile",files[0]);
+		
+	$.ajax({
+		type:"POST",
+		url:"/theme/importThemeAjax.do",
+		data: themeFormData,
+		success:function(data){
+			console.log("Import theme file success Data : " + data);
+		},
+		error:function(request, status, error){
+			console.log(request);
+			console.log(status);
+			console.log(error);
+		}
+	});
+}
+
 </script>
 </head>
 <body>
 	<!-- File Import -->
-	<input type="file" id="importTheme" name="importTheme" style="display:none" />
+	<input type="file" id="importTheme" name="importTheme" style="display:none" onChange="importThemeFile(this)" />
 	
 	<form id="viewThemeForm" name="viewThemeForm" action="/theme/viewTheme.do" method="post">
 		<input type="hidden" id="themeSeq" name="themeSeq" value=""/>
@@ -222,7 +244,7 @@ function getRecommendThemeListAjax(){
 		<!-- /footer -->
 	</div>
 
-	<div class="mw_layer open">
+	<div id="loading_layer" class="mw_layer open" style="display:none">
 		<div class="bg"></div>
 		<div class="mw_layer_body">
 			<a href="#" title="로그인 레이어 닫기" class="close">X</a>

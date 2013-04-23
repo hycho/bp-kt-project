@@ -30,6 +30,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springmodules.validation.commons.DefaultBeanValidator;
 
 import egovframework.kakaotheme.service.ThemeService;
@@ -116,6 +117,12 @@ public class ThemeController {
 		return "/kakaotheme/theme/view";
 	}
 	
+	/**
+	 * 저장된 테마를 Build 한다. 빌드가 이상없이 성공이 되는 경우 success 메세지를 전송한다. 
+	 * @param request
+	 * @return
+	 * @throws Exception
+	 */
 	@RequestMapping(value = "/theme/runPackageDownAjax.do", method = RequestMethod.POST)
 	@ResponseBody
 	public String runPackageDownAjax(HttpServletRequest request) throws Exception {
@@ -123,6 +130,23 @@ public class ThemeController {
 		Map<String, Object> parameters = RequestParamDataTrans.transDataMap(request);
 		
 		themeService.pakageTheme(parameters);
+		
+		JSONObject jsonObject = new JSONObject();
+		jsonObject.put("data", "success");
+		
+		return jsonObject.toString();
+	}
+	
+	/**
+	 * 저장된 테마를 Build 한다. 빌드가 이상없이 성공이 되는 경우 success 메세지를 전송한다. 
+	 * @param request
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping(value = "/theme/importThemeAjax.do", method = RequestMethod.POST)
+	@ResponseBody
+	public String importThemeAjax(MultipartHttpServletRequest request) throws Exception {
+		themeService.importTheme(request);
 		
 		JSONObject jsonObject = new JSONObject();
 		jsonObject.put("data", "success");

@@ -18,6 +18,8 @@ package egovframework.kakaotheme.service;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.web.multipart.MultipartHttpServletRequest;
+
 /**  
  * @Class Name : ThemeService.java
  * @Description : ThemeService Class
@@ -44,5 +46,12 @@ public interface ThemeService {
 	 * @throws Exception
 	 */
 	public void pakageTheme(Map<String, Object> parameters) throws Exception;
+	
+	/**
+	 * zip으로 압축이 된 테마를 import 한다.
+	 * @param parameters
+	 * @throws Exception
+	 */
+	public void importTheme(MultipartHttpServletRequest request) throws Exception;
 	
 }

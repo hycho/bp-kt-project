@@ -20,8 +20,11 @@ import java.util.Map;
 
 import javax.annotation.Resource;
 
-import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import egovframework.kakaotheme.service.ThemeService;
 import egovframework.kakaotheme.util.constants.Constants;
@@ -114,5 +117,15 @@ public class ThemeServiceImpl implements ThemeService{
 		};
 		
 		ProcessRun.run(secondPakageCmdLine);
+	}
+
+	public void importTheme(MultipartHttpServletRequest request) throws Exception {
+		// TODO Auto-generated method stub
+		
+		Map<String, MultipartFile> files = request.getFileMap();
+		CommonsMultipartFile cmf = (CommonsMultipartFile) files.get("importFile");
+		
+		//cmf.getInputStream();
+		
 	}
 }
