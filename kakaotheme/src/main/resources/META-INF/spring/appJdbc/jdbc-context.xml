@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+	    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<bean id="jndiDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">  
+	    <property name="jndiName" value="${jndiName}" />  
+	</bean>  
+	
+	<bean id="emf" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+	 	<property name="packagesToScan" value="kr.co.kakaotheme.domain" />  
+	    <property name="dataSource" ref="jndiDataSource" /> 
+	    <property name="jpaVendorAdapter" ref="hibernateVendor" />
+	</bean>
+	
+	<bean id="hibernateVendor" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" >
+		<property name="showSql" value="${hibernate.showSql}" />
+		<property name="generateDdl" value="${hibernate.generateDdl}" />
+        <property name="database" value="${hibernate.database}" />
+	</bean>
+	
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="emf" />
+	</bean>
+	
+	<tx:annotation-driven/>
+		
+</beans>

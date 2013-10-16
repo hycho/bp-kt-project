@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="theme">
+
+	<select id="themeDAO.selectAllTheme" resultClass="java.util.HashMap">
+		<![CDATA[
+			SELECT *
+			FROM TB_THEME 
+		]]>
+	</select>
+	
+	<!-- CNT 갯수에 따라서 최고 평가가 높은 순서대로 값을 가져옵니다. -->
+	<select id="themeDAO.selectBestCntTheme" parameterClass="java.util.HashMap" resultClass="java.util.HashMap">
+		<![CDATA[
+			SELECT *
+			FROM TB_THEME
+		]]>
+	</select>
+	
+	
+	<!-- theme id를 사용하여 theme의 1개의 row의 모든 것을 가져옵니다. -->
+	<select id="themeDAO.viewTheme" parameterClass="java.util.HashMap" resultClass="java.util.HashMap">
+		<![CDATA[
+			SELECT * FROM TB_THEME
+			WHERE THEME_SEQ = #themeSeq#
+		]]>
+	</select>
+	
+	<!-- Main Page에서 손님이 Insert하는 경우 발생 -->
+	<insert id="themeDAO.importTheme">
+		<![CDATA[
+			INSERT INTO TB_THEME(THEME_NAME, THEME_DESC, CREATED_DATE, CREATOR)
+			VALUES("Guest's Sample Data", "손님이 임의로 임포트한 테마", (SELECT NOW()), "guest")
+		]]>
+	</insert>
+
+</sqlMap>
