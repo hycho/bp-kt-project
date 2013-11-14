@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD iBatis Mapper 3.0 //EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="authorDao">
+
+	<select id="selectAuthorList" parameterType="java.util.Map" resultType="java.util.List">
+	    SELECT
+	           AUTHOR_CODE, AUTHOR_NM, AUTHOR_DC, CREATE_DT
+	      FROM TB_AUTHORINFO
+	     WHERE 1=1
+	     <if test="searchCondition != null">
+		 	AUTHOR_NM LIKE CONCAT('%' , #{searchKeyword}, '%')
+		 </if>
+	    ORDER BY CREATE_DT DESC
+	    LIMIT #{recordCountPerPage} OFFSET #{firstIndex}
+    </select>
+
+    <insert id="insertAuthor" parameterType="java.util.Map">
+        <![CDATA[
+            INSERT INTO TB_AUTHORINFO 
+                  ( AUTHOR_CODE
+                  , AUTHOR_NM
+                  , AUTHOR_DC
+                  , CREATE_DT )
+           VALUES ( #{authorCode}
+                  , #{authorNm}
+                  , #{authorDc}
+                  , now())
+        ]]> 
+    </insert>
+
+    <update id="updateAuthor" parameterType="java.util.Map">
+        <![CDATA[
+            UPDATE TB_AUTHORINFO 
+               SET AUTHOR_NM=#{authorNm}
+                 , AUTHOR_DC=#{authorDc}
+             WHERE AUTHOR_CODE=#{authorCode}
+        ]]>
+    </update>
+    
+    <delete id="deleteAuthor">
+        <![CDATA[
+            DELETE FROM TB_AUTHORINFO 
+             WHERE AUTHOR_CODE=#{authorCode}
+        ]]>
+    </delete>
+    
+    <select id="selectAuthor" resultType="java.util.List">
+        <![CDATA[
+            SELECT AUTHOR_CODE, AUTHOR_NM, AUTHOR_DC, CREATE_DT
+              FROM TB_AUTHORINFO 
+             WHERE AUTHOR_CODE=#{authorCode}
+        ]]>
+    </select>
+    
+    <select id="selectAuthorListTotCnt" parameterType="java.util.Map" resultType="int">
+            SELECT COUNT(*) totcnt
+            FROM TB_AUTHORINFO
+            WHERE 1=1
+            <if test="searchCondition != null">
+				AUTHOR_NM LIKE CONCAT('%' , #{searchKeyword}, '%')
+			</if>
+    </select>
+    
+    <select id="selectAuthorAllList" parameterType="java.util.Map" resultType="java.util.List">
+            SELECT
+                   AUTHOR_CODE, AUTHOR_NM, AUTHOR_DC, CREATE_DT
+              FROM TB_AUTHORINFO
+    </select>
+
+</mapper>                  
