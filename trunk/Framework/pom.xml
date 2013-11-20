@@ -25,6 +25,10 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
+		<repository>
+	      <id>apache release</id>
+	      <url>https://repository.apache.org/content/repositories/releases/</url>
+	    </repository>
 	</repositories>
 	
 	<properties>
@@ -65,6 +69,23 @@
 	</properties>
 	
 	<dependencies>
+		<!-- BIG -->
+		<dependency>
+	      <groupId>org.apache.hadoop</groupId>
+	      <artifactId>hadoop-core</artifactId>
+	      <version>1.0.3</version>
+	    </dependency>
+	    <dependency>
+	      <groupId>org.apache.hbase</groupId>
+	      <artifactId>hbase</artifactId>
+	      <version>0.94.13</version>
+	    </dependency>
+	    <dependency>
+	      <groupId>commons-io</groupId>
+	      <artifactId>commons-io</artifactId>
+	      <version>2.1</version>
+	    </dependency>
+	
 		<!-- =================================================== -->
 		<!-- apache common (basic module) -->
 		<!-- =================================================== -->
@@ -180,6 +201,11 @@
 		<!-- springframework (web-application framework) -->
 		<!-- =================================================== -->
 		<!-- spring-context-support : required to use org.springframework.scheduling.quartz package -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${org.springframework.spring.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
