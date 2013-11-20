@@ -33,7 +33,6 @@ public class AuthorDaoImpl extends BaseSqlSessionDaoSupport{
 	 */
     public void insertAuthor(Map<String, Object> params) throws Exception {
     	getSqlSession().insert("authorDao.insertAuthor", params);
-    	throw new RuntimeException("Rollback this transaction!");
     }
 
     /**

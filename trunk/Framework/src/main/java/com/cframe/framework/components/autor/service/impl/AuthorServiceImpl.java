@@ -1,24 +1,18 @@
 package com.cframe.framework.components.autor.service.impl;
 
-
-
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.cframe.framework.components.autor.dao.impl.AuthorDaoImpl;
 import com.cframe.framework.components.autor.service.AuthorService;
 
-
-
 @Service("authorService")
-@Transactional(propagation=Propagation.REQUIRED)
 public class AuthorServiceImpl implements AuthorService {
     
 	@Resource(name="authorDao")
@@ -39,10 +33,9 @@ public class AuthorServiceImpl implements AuthorService {
 	 * @param Map<String, Object> params
 	 * @exception Exception
 	 */
-    @Transactional(rollbackFor=RuntimeException.class)
+    @Transactional(rollbackFor=Exception.class)
     public void insertAuthor(Map<String, Object> params) throws Exception {
     	authorDao.insertAuthor(params);
-    	//throw new Exception();
     }
 
     /**

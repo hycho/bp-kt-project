@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.cframe.framework.components.autor.service.AuthorService;
+import com.cframe.framework.core.util.CommonUtility;
 
 
 
@@ -28,39 +29,6 @@ public class AuthorController {
 	
 	@Resource(name = "authorService")
     private AuthorService authorService;
-    
-	
-    /*@RequestMapping(value="/ProgramListDetailSelect", method = RequestMethod.GET)
-    public @ResponseBody ProgrmManageVO selectProgrm(
-    		@RequestParam("tmp_progrmNm") String tmp_progrmNm ,
-   		    @ModelAttribute("searchVO") ComDefaultVO searchVO, 
-    		ModelMap model)
-            throws Exception {
-        
-    	searchVO.setSearchKeyword(tmp_progrmNm);
-    	ProgrmManageVO progrmManageVO = progrmManageService.selectProgrm(searchVO);
-        
-        return progrmManageVO;
-    }
-    
-    @RequestMapping(value="/sample1", method = RequestMethod.GET)
-    public @ResponseBody List<Map<String,Object>> sample1(
-    		@ModelAttribute("progrmManageVO") ProgrmManageVO progrmManageVO){     
-    	try {
-			progrmManageService.deleteProgrm(progrmManageVO);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-    	
-    	List<Map<String,Object>> result = new ArrayList<Map<String,Object>>(); 
-        
-    	Map<String, Object> nMap = new HashMap<String, Object>();
-    	nMap.put("CCC", "CCCC");
-        result.add(nMap);
-    	
-        return result;
-    }*/
 	
 	/**
 	 * 권한 목록화면 이동
@@ -130,9 +98,9 @@ public class AuthorController {
 	 * @exception Exception
 	 */     
     @RequestMapping("/AuthorInsertView")
-    public @ResponseBody String insertAuthorView()
+    public String insertAuthorView()
             throws Exception {
-        return "/AuthorInsertView";
+        return "/components/author/regist";
     }
     
     /**
@@ -144,25 +112,8 @@ public class AuthorController {
 	 */ 
     @RequestMapping(value="/AuthorInsert", method = RequestMethod.GET)
     public @ResponseBody String insertAuthor(HttpServletRequest request) throws Exception {
-    	
-    	/*beanValidator.validate(authorManage, bindingResult); //validation 수행
-    	
-		if (bindingResult.hasErrors()) { 
-			return "egovframework/com/sec/ram/EgovAuthorInsert";
-		} else {
-	    	egovAuthorManageService.insertAuthor(authorManage);
-	        status.setComplete();
-	        model.addAttribute("message", egovMessageSource.getMessage("success.common.insert"));
-	        return "forward:/sec/ram/EgovAuthor.do";
-		}*/
-    	
-    	Map<String, Object> params = new HashMap<String, Object>();
-    	params.put("authorCode", "CODE1");
-    	params.put("authorNm", "NAME1");
-    	params.put("authorDc", "DESC1");
-     
+    	Map<String, Object> params = CommonUtility.transDataMap(request);
     	authorService.insertAuthor(params);
-    	
     	return "/AuthorInsert";
     }
     
@@ -235,4 +186,37 @@ public class AuthorController {
         return "/accessDenied";
     } 
         
+    
+    
+    /*@RequestMapping(value="/ProgramListDetailSelect", method = RequestMethod.GET)
+    public @ResponseBody ProgrmManageVO selectProgrm(
+    		@RequestParam("tmp_progrmNm") String tmp_progrmNm ,
+   		    @ModelAttribute("searchVO") ComDefaultVO searchVO, 
+    		ModelMap model)
+            throws Exception {
+        
+    	searchVO.setSearchKeyword(tmp_progrmNm);
+    	ProgrmManageVO progrmManageVO = progrmManageService.selectProgrm(searchVO);
+        
+        return progrmManageVO;
+    }
+    
+    @RequestMapping(value="/sample1", method = RequestMethod.GET)
+    public @ResponseBody List<Map<String,Object>> sample1(
+    		@ModelAttribute("progrmManageVO") ProgrmManageVO progrmManageVO){     
+    	try {
+			progrmManageService.deleteProgrm(progrmManageVO);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+    	List<Map<String,Object>> result = new ArrayList<Map<String,Object>>(); 
+        
+    	Map<String, Object> nMap = new HashMap<String, Object>();
+    	nMap.put("CCC", "CCCC");
+        result.add(nMap);
+    	
+        return result;
+    }*/
 }
