@@ -32,8 +32,6 @@
 		<constructor-arg ref="sqlSessionFactory"/>
     </bean>
     
-    
-    
     <aop:aspectj-autoproxy/>
 	<tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>
 	
@@ -41,16 +39,4 @@
 		<property name="dataSource" ref="jdbcDataSource" />
 		<property name="validateExistingTransaction" value="true" />
 	</bean> 
-	
-	<tx:advice id="transactionAdvice" transaction-manager="transactionManager">
-		<tx:attributes>
-			<tx:method name="*" propagation="REQUIRED" rollback-for="Exception"/>
-		</tx:attributes>
-	</tx:advice>
-	
-	<aop:config proxy-target-class="true">
-		<aop:pointcut id="process_tx" expression="execution(* com.cframe.framework.components.author.service.impl.*.*(..))"/>
-		<aop:advisor advice-ref="transactionAdvice" pointcut-ref="process_tx" />
-	</aop:config>
-	
 </beans>
