@@ -31,7 +31,7 @@ public class BigTutorialController {
 	
 	final Map<DeferredResult<String>, String> pushMap = new HashMap<DeferredResult<String>, String>();
 	
-    @RequestMapping(value = "/big", method = RequestMethod.GET)
+  @RequestMapping(value = "/big", method = RequestMethod.GET)
 	public String home(Locale locale, Model model, HttpSession session) {
     	log.info("Welcome home! Tutorial Big");
     	return "/tutorial/big/big";
