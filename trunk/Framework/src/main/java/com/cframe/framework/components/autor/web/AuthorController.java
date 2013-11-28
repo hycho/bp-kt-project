@@ -1,7 +1,5 @@
 package com.cframe.framework.components.autor.web;
 
-
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,10 +15,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.cframe.framework.components.autor.service.AuthorService;
 import com.cframe.framework.core.util.CommonUtility;
-
-
-
-
 
 @Controller
 @RequestMapping("/manager/author")
