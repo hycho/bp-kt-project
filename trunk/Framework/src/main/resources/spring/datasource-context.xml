@@ -28,11 +28,10 @@
 		<property name="mapperLocations" value="classpath*:/sqlmap/*/*.xml" />
 	</bean>
      
-    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+  <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg ref="sqlSessionFactory"/>
-    </bean>
+  </bean>
     
-    <aop:aspectj-autoproxy/>
 	<tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>
 	
 	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
