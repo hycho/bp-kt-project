@@ -1,2 +1,0 @@
-var SUCCESS_FLAG=1;
-var FAIL_FLAG=0;
