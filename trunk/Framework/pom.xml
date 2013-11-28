@@ -182,6 +182,11 @@
 			<artifactId>aspectjweaver</artifactId>
 			<version>${org.aspectj.aspectjrt.version}</version>
 		</dependency>
+			<dependency>
+	   <groupId>org.aspectj</groupId>
+	   <artifactId>aspectjtools</artifactId>
+	   <version>${org.aspectj.aspectjrt.version}</version>
+	  </dependency>
 		
 		<!-- =================================================== -->
 		<!-- mybatis (persistance layer framework) -->
