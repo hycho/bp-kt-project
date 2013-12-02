@@ -47,26 +47,23 @@ $(function() {
 			<!-- Master Nav -->
 			<nav class="main-menu">
 				<ul>
-					<li><a href="index.html">Home</a></li>
+					<li><a href="/home">Home</a></li>
 					<li>
 						<a>Pages</a>
 						<ul>
 							<li><a href="elements.html">Elements</a></li>
 							<li><a href="typography.html">Typography</a></li>
 							<li><a href="blog_single.html">Blog Single Post</a></li>
-							
 							<li><a href="javascript:">Pricing</a>
 								<ul>
 									<li><a href="pricing_2_cols.html">Pricing 2 Cols</a></li>
-                                    <li><a href="pricing_3_cols.html">Pricing 3 Cols</a></li>
-                                    <li><a href="pricing_4_cols.html">Pricing 4 Cols</a></li>
-                                    <li><a href="pricing_5_cols.html">Pricing 5 Cols</a></li>
-									
+                  <li><a href="pricing_3_cols.html">Pricing 3 Cols</a></li>
+                  <li><a href="pricing_4_cols.html">Pricing 4 Cols</a></li>
+                  <li><a href="pricing_5_cols.html">Pricing 5 Cols</a></li>
 								</ul>
 							</li>
-                            
-                            <li><a href="full_width.html">Full Width</a></li>
-<li><a href="404.html">404 Page</a></li>
+              <li><a href="full_width.html">Full Width</a></li>
+							<li><a href="404.html">404 Page</a></li>
 						</ul>
 					</li>
 					<li><a>Portfolio</a>
@@ -79,6 +76,16 @@ $(function() {
 					</li>
 					<li><a href="blog.html">Blog</a></li>
 					<li><a href="contact.html">Contact</a></li>
+					<li><a>관리</a>
+						<ul>
+							<li>
+								<a href="">사용자</a>
+								<ul>
+									<li><a href="<c:url value='/manager/user/userListView'/>">리스트</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
 				</ul>
 			</nav>
 			<!-- /Master Nav -->
@@ -133,7 +140,6 @@ $(function() {
 				<div class="title clearfix">
 					<img src="<c:url value='/resources/images/code-icon.png' />" alt="" class="alignleft" />
 					<h3>Beautiful, Responsive and Valid Template</h3>
-
 				</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id ligula in ipsum vulputate volutpat at ut nisi. Aliquam erat volutpat. Maecenas pretium dolor vitae lectus fermentum convallis bibendum in erat. Donec vitae risus non lorem volutpat fringilla in in metus. Aenean quis eros diam. Proin porta quam at neque congue iaculis. <br /> <a href="#">more info</a></p> 
 			</div>

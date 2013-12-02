@@ -137,21 +137,45 @@ public class UserManagerController {
 		return userManageService.chkUserId(params);
     }
 	
+	/**
+	 * 유저 리스트 화면으로 이동한다.
+	 * @param request
+	 * @return
+	 * @throws Exception
+	 */
 	@RequestMapping(value="/userListView")
 	public String userListView(HttpServletRequest request)throws Exception {
 		return "components/userManager/list";
     }
 	
+	/**
+	 * 유저 수정 화면으로 이동한다.
+	 * @param request
+	 * @return
+	 * @throws Exception
+	 */
 	@RequestMapping(value="/userUpdateView")
 	public String userUpdateView(HttpServletRequest request)throws Exception {
 		return "components/userManager/update";
     } 
 	
+	/**
+	 * 유저 등록 화면으로 이동한다.
+	 * @param request
+	 * @return
+	 * @throws Exception
+	 */
 	@RequestMapping(value="/userInsertView")
 	public String userInsertView(HttpServletRequest request)throws Exception {
 		return "components/userManager/insert";
     }
 	
+	/**
+	 * 유저 password 수정 화면으로 이동한다.
+	 * @param request
+	 * @return
+	 * @throws Exception
+	 */
 	@RequestMapping(value="/userPasswordUpdateView")
 	public String userPasswordUpdateView(HttpServletRequest request)throws Exception {
 		return "components/userManager/passwordUpdate";

@@ -3,174 +3,249 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <html>
 <head>
-	<title><spring:message code="author.regist.title" /></title>
-	<script type="text/javascript" src="<c:url value='/resources/js/knockout/knockout-3.0.0.js'/>"></script>
-	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/style.css'/>">
-	<script type="text/javascript">
-	$(function(){});
-	</script>
+  <title>User List</title>
+  <link rel="stylesheet" href="<c:url value='/resources/css/style.css'/>" type="text/css" />
+	<script type="text/javascript" src="<c:url value='/resources/js/jquery.min.js'/>"></script>
+	<script type="text/javascript" src="<c:url value='/resources/js/jquery.easing.1.3.js'/>"></script>
+	<script type="text/javascript" src="<c:url value='/resources/js/jquery-ui-1.8.16.custom.min.js'/>"></script>
+	<script type="text/javascript" src="<c:url value='/resources/js/all-in-one-min.js'/>"></script>
+	<script type="text/javascript" src="<c:url value='/resources/js/setup.js'/>"></script>
 </head>
 <body>
-<div id="code_origin" class="code_tmpl">
-<!-- UI Object -->
-<form action="" method="post">
-	<fieldset>
-		<legend>Legend</legend>
-		<div class="form_table">
-		<table border="1" cellspacing="0" summary="표의 요약을 반드시 넣어 주세요">
-		<tbody>
-		<tr>
-		<th scope="row">인풋: 설명 숨기고 줄 바꿈 없는</th>
-		<td>
-			<div class="item">
-				<input type="text" name="" title="레이블 텍스트" class="i_text">
-				<button type="button" class="i_help"><span>?</span></button>
-				<span class="i_dsc hide">숨겨둔 설명 입니다. 줄 바꿈 없습니다.</span>
+    <header class="header_bg clearfix">
+		<div class="container clearfix">
+    <!-- Social -->
+   	<ul class="social-links">
+    	<li ><a href="javascript:"><img src="<c:url value='/resources/images/facebook.png' />" alt="Facebook"></a></li>
+      <li ><a href="javascript:"><img src="<c:url value='/resources/images/twitter.png' />" width="24" height="24" alt="Twitter"></a></li>
+    </ul>
+		<!-- /Social -->
+		<!-- Logo -->
+		<div class="logo">
+			<a href="index.html"><img src="<c:url value='/resources/images/logo.png' />" alt="" /></a>
+		</div>
+		<!-- /Logo -->
+			
+		<!-- Master Nav -->
+		<nav class="main-menu">
+			<ul>
+				<li><a href="/home">Home</a></li>
+				<li>
+					<a>Pages</a>
+					<ul>
+						<li><a href="elements.html">Elements</a></li>
+						<li><a href="typography.html">Typography</a></li>
+						<li><a href="blog_single.html">Blog Single Post</a></li>
+						<li><a href="javascript:">Pricing</a>
+							<ul>
+								<li><a href="pricing_2_cols.html">Pricing 2 Cols</a></li>
+                 <li><a href="pricing_3_cols.html">Pricing 3 Cols</a></li>
+                 <li><a href="pricing_4_cols.html">Pricing 4 Cols</a></li>
+                 <li><a href="pricing_5_cols.html">Pricing 5 Cols</a></li>
+							</ul>
+						</li>
+             <li><a href="full_width.html">Full Width</a></li>
+						<li><a href="404.html">404 Page</a></li>
+					</ul>
+				</li>
+				<li><a>Portfolio</a>
+					<ul>
+						<li><a href="portfolio_2_cols.html">Portfolio 2 Cols</a></li>
+						<li><a href="portfolio_3_cols.html">Portfolio 3 Cols</a></li>
+						<li><a href="portfolio_4_cols.html">Portfolio 4 Cols</a></li>
+						<li><a href="portfolio_details.html">Portfolio Details</a></li>
+					</ul>
+				</li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a>관리</a>
+					<ul>
+						<li>
+							<a href="">사용자</a>
+							<ul>
+								<li><a href="<c:url value='/manager/user/userListView' />">리스트</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<!-- /Master Nav -->
+		</div>
+</header>
+<!-- /Header -->
+<!-- START CONTENT -->
+<section class="container clearfix">
+<!-- Page Title -->
+<header class="container page_info clearfix">
+	<h1 class="regular brown bottom_line">사용자 리스트</h1>
+	<div class="clear"></div>
+</header>
+		<!-- /Page Title -->
+		<div class="">
+			<div id="code_origin" class="code_tmpl">
+				<p>
+					<select data-bind="value: searchType">
+					  <option value="userId">아이디</option>
+					  <option value="userNm">사용자이름</option>
+					  <option value="status">가입상태</option>
+			    </select>
+					<input class="inputText" type="text" id="name" name="name" />
+				</p>	
+				
+				<table cellspacing="0" border="1" summary="사용자 리스트" class="tbl_type">
+					<caption>사용자 리스트</caption>
+					<colgroup>
+					<col width="12%"><col><col width="12%" span="6">
+					</colgroup>
+					<thead>
+					<tr>
+						<th scope="col"><input type="checkbox" /></th>
+						<th scope="col">아이디</th>
+						<th scope="col">이름</th>
+						<th scope="col">이메일</th>
+						<th scope="col">등록일</th>
+						<th scope="col">상태</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td><input type="checkbox" /></td>
+						<td>A12334654</td>
+						<td>DELL</td>
+						<td>3QZG615</td>
+						<td>GX620</td>
+						<td>DESKTOP</td>
+					</tr>
+					</tbody>
+				</table>
 			</div>
-		</td>
-		</tr>
-		<tr>
-		<th scope="row">인풋: 설명 숨기고 줄 바꿈</th>
-		<td>
-			<div class="item">
-				<input type="text" name="" title="레이블 텍스트" class="i_text">
-				<button type="button" class="i_help"><span>?</span></button>
-				<p class="i_dsc hide">숨겨둔 설명 입니다. 줄 바꿈 했습니다.</p>
+			<div style="text-align:right">
+				<a href="#" class="button white">등록</a>
+				<a href="#" class="button white">삭제</a>
+				<a href="#" class="button white">이전페이지</a>
 			</div>
-		</td>
-		</tr>
-		<tr>
-		<th scope="row">인풋: 설명 보이고 줄 바꿈 없는</th>
-		<td>
-			<div class="item">
-				<input type="text" name="" title="레이블 텍스트" class="i_text"> 숨겨두지 않은 설명 입니다. 줄 바꿈 없습니다.
+			
+			
+			
+			<div class="success_box">
+				Alert Text
 			</div>
-		</td>
-		</tr>
-		<tr>
-		<th scope="row">인풋: 설명 보이고 줄 바꿈</th>
-		<td>
-			<div class="item">
-				<input type="text" name="" title="레이블 텍스트" class="i_text">
-				<p class="i_dsc">숨겨두지 않은 설명 입니다. 줄 바꿈 했습니다.</p>
+			
+			<div class="attention_box">
+				Alert Text
 			</div>
-		</td>
-		</tr>
-		<tr>
-		<th scope="row">인풋: 줄 바꿈 없는 인풋</th>
-		<td>
-			<div class="item">
-				<input type="text" name="" title="레이블 텍스트" class="i_text"> - <input type="text" name="" title="레이블 텍스트" class="i_text">
+		
+			<div class="error_box">
+				Alert Text
 			</div>
-		</td>
-		</tr>
-		<tr>
-		<th scope="row">인풋: 줄 바꿈</th>
-		<td>
-			<div class="item">
-				<input type="text" name="" title="레이블 텍스트" class="i_text"><br>
-				<input type="text" name="" title="레이블 텍스트" class="i_text">
+		</div>
+		
+		
+		<div class="clear padding20"></div>
+
+		<div class="col_1_2">
+			
+				<div class="tabs">
+					<ul>
+						<li><a href="#tabs-0">Lorem</a></li>
+						<li><a href="#tabs-1">Ipsum</a></li>
+						<li><a href="#tabs-2">Dolor</a></li>
+					</ul>
+					<div class="clear"></div>
+					<div class="bordered_box">
+						<div id="tabs-0" >
+							<div class="content_text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+						</div>
+						<div id="tabs-1">
+							<div class="content_text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+						</div>
+						<div id="tabs-2">
+							<div class="content_text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+						</div>
+					</div>
+				</div>
+		</div>
+		
+		
+		
+		<div class="col_1_2 last">
+			<div class="toogle_box">
+				<div class="toggle opened_toggle">
+					<div class="icon"></div>
+					Toggle
+				</div>
+				<div class="toggle_container">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                      </p> <p> 
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+					</p>
+				</div>
 			</div>
-		</td>
-		</tr>
-		<tr>
-		<th scope="row">인풋: 레이블 클리어</th>
-		<td>
-			<div class="item">
-				<label for="temp_input" class="i_label">레이블 텍스트를 인풋과 오버레이</label>
-				<input type="text" name="" id="temp_input" class="i_text" style="width:300px">
+			
+			
+			
+		</div>
+		
+		<div class="clear padding30"></div>
+
+		
+		
+		<h1>Buttons</h1>
+		
+		
+		<div class="clear padding20"></div>
+		
+		<div >
+			<a href="#" class="button white">Button</a>
+			<a href="#" class="button grey">Button</a>
+      <a href="#" class="button red">Button</a>
+      <a href="#" class="button orange">Button</a>
+      <a href="#" class="button green">Button</a>
+      <a href="#" class="button teal">Button</a>
+      <a href="#" class="button blue">Button</a>
+			<a href="#" class="button navy">Button</a>
+
+
+		</div>
+		
+		
+		<div class="clear padding30"></div>
+
+	
+	</section>
+    <!-- END CONTENT -->
+    <!-- footer -->
+    <footer class="footer_bg_bottom clearfix">
+		<div class="footer_bottom container">
+			<div class="col_2_3">
+				
+				<div class="menu">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+            <li><a href="elements.html">Elements</a></li>
+						<li><a href="portfolio_4_cols.html">Portfolio</a></li>
+						<li><a href="pricing_5_cols.html">Pricing</a></li>
+						<li><a href="blog.html">Blog</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+				
+				
+				<div class="clear padding20"></div>
+				
+				
+				<p>
+					&copy; Some Rights Reserved. &nbsp; <a href="#">Legal Notices</a>  
+				</p>
+				
 			</div>
-		</td>
-		</tr>
-		<tr>
-		<th scope="row">멀티라인 인풋</th>
-		<td>
-			<div class="item">
-				<textarea name="" cols="50" rows="5" title="레이블 텍스트" class="i_text"></textarea>
-			</div>
-		</td>
-		</tr>
-		<tr>
-		<th scope="row">멀티라인 인풋: 레이블 클리어</th>
-		<td>
-			<div class="item">
-				<label for="temp_textarea" class="i_label">레이블 텍스트를 멀티라인 인풋과 오버레이</label>
-				<textarea name="" cols="50" rows="5" id="temp_textarea" class="i_text"></textarea>
-			</div>
-		</td>
-		</tr>
-		<tr>
-		<th scope="row">셀렉트: 단일 선택</th>
-		<td>
-			<div class="item">
-				<select name="">
-					<option>옵션 하나</option>
-					<option>옵션 둘</option>
-					<option>옵션 셋</option>
-				</select>
-			</div>
-		</td>
-		</tr>
-		<tr>
-		<th scope="row">셀렉트: 복수 선택</th>
-		<td>
-			<div class="item">
-				<select name="" multiple="multiple">
-					<option>옵션 하나</option>
-					<option>옵션 둘</option>
-					<option>옵션 셋</option>
-				</select>
-			</div>
-		</td>
-		</tr>
-		<tr>
-		<th scope="row">체크박스 인풋: 줄 바꿈 없는</th>
-		<td>
-			<div class="item">
-				<input name="" type="checkbox" value="" id="a1" class="i_check"><label for="a1">레이블</label> <input name="" type="checkbox" value="" id="a2" class="i_check"><label for="a2">레이블</label>
-			</div>
-		</td>
-		</tr>
-		<tr>
-		<th scope="row">체크박스 인풋: 줄 바꿈 있는</th>
-		<td>
-			<div class="item">
-				<input name="" type="checkbox" value="" id="b1" class="i_check"><label for="b1">레이블</label><br>
-				<input name="" type="checkbox" value="" id="b2" class="i_check"><label for="b2">레이블</label>
-			</div>
-		</td>
-		</tr>
-		<tr>
-		<th scope="row">라디오 인풋: 줄 바꿈 없는</th>
-		<td>
-			<div class="item">
-				<input name="" type="radio" value="" id="c1" class="i_radio"><label for="c1">레이블</label> <input name="" type="radio" value="" id="c2" class="i_radio"><label for="c2">레이블</label>
-			</div>
-		</td>
-		</tr>
-		<tr>
-		<th scope="row">라디오 인풋: 줄 바꿈 있는</th>
-		<td>
-			<div class="item">
-				<input name="" type="radio" value="" id="d1" class="i_radio"><label for="d1">레이블</label><br>
-				<input name="" type="radio" value="" id="d2" class="i_radio"><label for="d2">레이블</label>
-			</div>
-		</td>
-		</tr>
-		<tr>
-		<th scope="row">파일</th>
-		<td>
-			<div class="item">
-				<input name="" type="file" title="레이블 텍스트">
-			</div>
-		</td>
-		</tr>
-		</tbody>
-		</table>
-	</div>
-	</fieldset>
-</form>
-<!-- //UI Object -->
-</div>
+			
+			<div class="clear padding20"></div>
+		</div>
+	</footer>
+    <!-- /footer -->
 </body>
 </html>
