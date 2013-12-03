@@ -9,7 +9,6 @@ import org.springframework.stereotype.Repository;
 
 import com.cframe.framework.core.database.mybatis3.BaseSqlSessionDaoSupport;
 
-
 /**
  * 일반회원관리에 관한 데이터 접근 클래스를 정의한다.
  * @author 조호영.
@@ -85,24 +84,6 @@ public class UserManageDaoImpl extends BaseSqlSessionDaoSupport{
 	  return getSqlSession().update("updateUser",params);
     }
     
-    /**
-     * 유저의 암호를 수정한다.
-     * @param params
-     * @return
-     */
-  public int updatePassword(Map<String, Object> params) {
-	  return getSqlSession().update("updatePassword", params);
-    }
-    
-    /**
-     * 유저의 비밀번호를 알아온다.
-     * @param params
-     * @return
-     */
-  public List<Map<String, Object>> selectPassword(Map<String, Object> params){
-	  return getSqlSession().selectList("selectPassword", params);
-    }
-  
   	/**
   	 	  * 중복된 유저의 ID가 있는지 확인한다.
   	 * @param params

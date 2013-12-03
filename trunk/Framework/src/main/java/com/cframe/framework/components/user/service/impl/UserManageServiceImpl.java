@@ -71,18 +71,6 @@ public class UserManageServiceImpl implements UserManageService {
 
 	@Override
 	@Transactional(rollbackFor=Exception.class)
-	public int updatePassword(Map<String, Object> params) throws Exception {
-		return userManageDao.updatePassword(params);
-	}
-
-	@Override
-	@Transactional(rollbackFor=Exception.class)
-	public List<Map<String, Object>> selectPassword(Map<String, Object> params)	throws Exception {
-		return userManageDao.selectPassword(params);
-	}
-
-	@Override
-	@Transactional(rollbackFor=Exception.class)
 	public int chkUserId(Map<String, Object> params) throws Exception {
 		return userManageDao.chkUserId(params);
 	}

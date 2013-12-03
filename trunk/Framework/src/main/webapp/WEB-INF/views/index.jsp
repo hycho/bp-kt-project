@@ -30,102 +30,37 @@ $(function() {
 </style>
 </head>
 <body>
-<header class="header_bg clearfix">
-		<div class="container clearfix">
-        	<!-- Social -->
-            	<ul class="social-links">
-                	<li ><a href="javascript:"><img src="<c:url value='/resources/images/facebook.png' />" alt="Facebook"></a></li>
-                    <li ><a href="javascript:"><img src="<c:url value='/resources/images/twitter.png' />" width="24" height="24" alt="Twitter"></a></li>
-                </ul>
-            <!-- /Social -->
-			 <!-- Logo -->
-			<div class="logo">
-				<a href="index.html"><img src="<c:url value='/resources/images/logo.png' />" alt="" /></a>
-			</div>
-			 <!-- /Logo -->
-			
-			<!-- Master Nav -->
-			<nav class="main-menu">
-				<ul>
-					<li><a href="/home">Home</a></li>
-					<li>
-						<a>Pages</a>
-						<ul>
-							<li><a href="elements.html">Elements</a></li>
-							<li><a href="typography.html">Typography</a></li>
-							<li><a href="blog_single.html">Blog Single Post</a></li>
-							<li><a href="javascript:">Pricing</a>
-								<ul>
-									<li><a href="pricing_2_cols.html">Pricing 2 Cols</a></li>
-                  <li><a href="pricing_3_cols.html">Pricing 3 Cols</a></li>
-                  <li><a href="pricing_4_cols.html">Pricing 4 Cols</a></li>
-                  <li><a href="pricing_5_cols.html">Pricing 5 Cols</a></li>
-								</ul>
-							</li>
-              <li><a href="full_width.html">Full Width</a></li>
-							<li><a href="404.html">404 Page</a></li>
-						</ul>
-					</li>
-					<li><a>Portfolio</a>
-						<ul>
-							<li><a href="portfolio_2_cols.html">Portfolio 2 Cols</a></li>
-							<li><a href="portfolio_3_cols.html">Portfolio 3 Cols</a></li>
-							<li><a href="portfolio_4_cols.html">Portfolio 4 Cols</a></li>
-							<li><a href="portfolio_details.html">Portfolio Details</a></li>
-						</ul>
-					</li>
-					<li><a href="blog.html">Blog</a></li>
-					<li><a href="contact.html">Contact</a></li>
-					<li><a>관리</a>
-						<ul>
-							<li>
-								<a href="">사용자</a>
-								<ul>
-									<li><a href="<c:url value='/manager/user/userListView'/>">리스트</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</nav>
-			<!-- /Master Nav -->
-		</div>
-	</header>
-	<!-- /Header -->
-	
-	<div class="clear"></div>
-	
 	<!-- Slider -->
-    <div class="bannerbg">
-        <div class="container clearfix">
-                <div class="flexslider" >
-                <ul class="slides">
-                    <li>
-                        <img src="<c:url value='/resources/images/fslide01.jpg' />" alt="" />
-                        <p class="flex-caption">I am Caption!</p>
-                    </li>
-                    <li>
-                        <a href="#"><img src="<c:url value='/resources/images/fslide02.jpg' />" alt="" /></a>
-                    </li>
-                    <li>
-                        <img src="<c:url value='/resources/images/fslide03.jpg' />" alt="" />
-                        <p class="flex-caption">I am Caption!</p>
-                    </li>
-                    <li>
-                        <img src="<c:url value='/resources/images/fslide04.jpg' />" alt="" />
-                    </li>
-                    
-                    <li>
-                        <img src="<c:url value='/resources/images/fslide05.jpg' />" alt="" />
-                    </li>
-                    
-                    <li>
-                        <img src="<c:url value='/resources/images/fslide06.jpg' />" alt="" />
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+	<div class="bannerbg">
+	    <div class="container clearfix">
+	            <div class="flexslider" >
+	            <ul class="slides">
+	                <li>
+	                    <img src="<c:url value='/resources/images/fslide01.jpg' />" alt="" />
+	                    <p class="flex-caption">I am Caption!</p>
+	                </li>
+	                <li>
+	                    <a href="#"><img src="<c:url value='/resources/images/fslide02.jpg' />" alt="" /></a>
+	                </li>
+	                <li>
+	                    <img src="<c:url value='/resources/images/fslide03.jpg' />" alt="" />
+	                    <p class="flex-caption">I am Caption!</p>
+	                </li>
+	                <li>
+	                    <img src="<c:url value='/resources/images/fslide04.jpg' />" alt="" />
+	                </li>
+	                
+	                <li>
+	                    <img src="<c:url value='/resources/images/fslide05.jpg' />" alt="" />
+	                </li>
+	                
+	                <li>
+	                    <img src="<c:url value='/resources/images/fslide06.jpg' />" alt="" />
+	                </li>
+	            </ul>
+	        </div>
+	    </div>
+	</div>
 	<!-- /Slider -->
 	
 	<div class="clear padding40"></div>

@@ -3,143 +3,143 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <html>
 <head>
-  <title>User List</title>
+  <title>사용자 리스트</title>
   <link rel="stylesheet" href="<c:url value='/resources/css/style.css'/>" type="text/css" />
+  <link rel="stylesheet" href="<c:url value='/resources/css/pagination.css'/>" type="text/css" />
 	<script type="text/javascript" src="<c:url value='/resources/js/jquery.min.js'/>"></script>
 	<script type="text/javascript" src="<c:url value='/resources/js/jquery.easing.1.3.js'/>"></script>
 	<script type="text/javascript" src="<c:url value='/resources/js/jquery-ui-1.8.16.custom.min.js'/>"></script>
 	<script type="text/javascript" src="<c:url value='/resources/js/all-in-one-min.js'/>"></script>
 	<script type="text/javascript" src="<c:url value='/resources/js/setup.js'/>"></script>
+	<script type="text/javascript" src="<c:url value='/resources/js/jquery.paginate.js'/>"></script>
+	<script type="text/javascript">
+	var RECORDCOUNTPERPAGE = 10;
+	
+	$(function(){
+		function UserListModel() {
+			var self = this;
+			//data
+			self.userListData = ko.observable();
+			self.searchType = ko.observable();
+			self.searchValue = ko.observable();
+			//comp
+			
+			//operation
+			self.search = function() {
+				searchFunc(1);
+			};
+			
+			searchFunc = function(count){
+				$.ajax("/rest/manager/user/selectUserList", {
+	      	data: {
+	      		searchType : self.searchType(),
+	      		searchValue : self.searchValue(),
+	      		recordCountPerPage : RECORDCOUNTPERPAGE,
+	      		pageIndex : (count-1) * RECORDCOUNTPERPAGE
+	      			},
+	        type: "post",
+	        dataType: "json",
+	        success: function(data){
+	        	self.userListData(data);
+	        	setPaginate("pagenation" ,data.totalCount/RECORDCOUNTPERPAGE, count, RECORDCOUNTPERPAGE, function(page){
+	        		searchFunc(page);
+	        			});
+	        		}
+		        });
+			};
+			
+			function setPaginate(pageElemId ,pCount, pStart, pDisplay, func){
+				$("#"+pageElemId).paginate({
+					count: Math.ceil(pCount),
+					start: pStart,
+					display: pDisplay,
+					border: false,
+					text_color: '#79B5E3',
+					background_color: 'none',	
+					text_hover_color: '#2573AF',
+					background_hover_color: 'none', 
+					images: false,
+					mouse: 'press',
+					onChange: func
+				});	
+				
+				var pagenationWidth = 0;
+				$("#"+pageElemId).find("div").each(function(idx, obj){
+					pagenationWidth += Number($(obj).css("width").substring(0,$(obj).css("width").length-2));
+				});
+				$("#"+pageElemId).css("width", pagenationWidth);
+			}
+		}
+		
+		var userListModel = new UserListModel();
+		ko.applyBindings(userListModel);
+		userListModel.search();
+	});
+	</script>
 </head>
 <body>
-    <header class="header_bg clearfix">
-		<div class="container clearfix">
-    <!-- Social -->
-   	<ul class="social-links">
-    	<li ><a href="javascript:"><img src="<c:url value='/resources/images/facebook.png' />" alt="Facebook"></a></li>
-      <li ><a href="javascript:"><img src="<c:url value='/resources/images/twitter.png' />" width="24" height="24" alt="Twitter"></a></li>
-    </ul>
-		<!-- /Social -->
-		<!-- Logo -->
-		<div class="logo">
-			<a href="index.html"><img src="<c:url value='/resources/images/logo.png' />" alt="" /></a>
-		</div>
-		<!-- /Logo -->
-			
-		<!-- Master Nav -->
-		<nav class="main-menu">
-			<ul>
-				<li><a href="/home">Home</a></li>
-				<li>
-					<a>Pages</a>
-					<ul>
-						<li><a href="elements.html">Elements</a></li>
-						<li><a href="typography.html">Typography</a></li>
-						<li><a href="blog_single.html">Blog Single Post</a></li>
-						<li><a href="javascript:">Pricing</a>
-							<ul>
-								<li><a href="pricing_2_cols.html">Pricing 2 Cols</a></li>
-                 <li><a href="pricing_3_cols.html">Pricing 3 Cols</a></li>
-                 <li><a href="pricing_4_cols.html">Pricing 4 Cols</a></li>
-                 <li><a href="pricing_5_cols.html">Pricing 5 Cols</a></li>
-							</ul>
-						</li>
-             <li><a href="full_width.html">Full Width</a></li>
-						<li><a href="404.html">404 Page</a></li>
-					</ul>
-				</li>
-				<li><a>Portfolio</a>
-					<ul>
-						<li><a href="portfolio_2_cols.html">Portfolio 2 Cols</a></li>
-						<li><a href="portfolio_3_cols.html">Portfolio 3 Cols</a></li>
-						<li><a href="portfolio_4_cols.html">Portfolio 4 Cols</a></li>
-						<li><a href="portfolio_details.html">Portfolio Details</a></li>
-					</ul>
-				</li>
-				<li><a href="blog.html">Blog</a></li>
-				<li><a href="contact.html">Contact</a></li>
-				<li><a>관리</a>
-					<ul>
-						<li>
-							<a href="">사용자</a>
-							<ul>
-								<li><a href="<c:url value='/manager/user/userListView' />">리스트</a></li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
-		<!-- /Master Nav -->
-		</div>
-</header>
-<!-- /Header -->
-<!-- START CONTENT -->
 <section class="container clearfix">
-<!-- Page Title -->
 <header class="container page_info clearfix">
 	<h1 class="regular brown bottom_line">사용자 리스트</h1>
 	<div class="clear"></div>
 </header>
-		<!-- /Page Title -->
-		<div class="">
-			<div id="code_origin" class="code_tmpl">
-				<p>
-					<select data-bind="value: searchType">
-					  <option value="userId">아이디</option>
-					  <option value="userNm">사용자이름</option>
-					  <option value="status">가입상태</option>
-			    </select>
-					<input class="inputText" type="text" id="name" name="name" />
-				</p>	
-				
-				<table cellspacing="0" border="1" summary="사용자 리스트" class="tbl_type">
-					<caption>사용자 리스트</caption>
-					<colgroup>
-					<col width="12%"><col><col width="12%" span="6">
-					</colgroup>
-					<thead>
-					<tr>
-						<th scope="col"><input type="checkbox" /></th>
-						<th scope="col">아이디</th>
-						<th scope="col">이름</th>
-						<th scope="col">이메일</th>
-						<th scope="col">등록일</th>
-						<th scope="col">상태</th>
-					</tr>
-					</thead>
-					<tbody>
-					<tr>
-						<td><input type="checkbox" /></td>
-						<td>A12334654</td>
-						<td>DELL</td>
-						<td>3QZG615</td>
-						<td>GX620</td>
-						<td>DESKTOP</td>
-					</tr>
-					</tbody>
-				</table>
-			</div>
-			<div style="text-align:right">
-				<a href="#" class="button white">등록</a>
-				<a href="#" class="button white">삭제</a>
-				<a href="#" class="button white">이전페이지</a>
-			</div>
-			
-			
-			
-			<div class="success_box">
-				Alert Text
-			</div>
-			
-			<div class="attention_box">
-				Alert Text
-			</div>
+<!-- /Page Title -->
+<div class="">
+	<div data-bind="with: userListData" id="code_origin" class="code_tmpl">
+		<p>
+			<select data-bind="value: $root.searchType">
+			  <option value="userId">아이디</option>
+	    </select>
+			<input data-bind="value: $root.searchValue" class="inputText" type="text" id="name" name="name" />
+		</p>	
 		
-			<div class="error_box">
-				Alert Text
-			</div>
-		</div>
+		<table cellspacing="0" border="1" summary="사용자 리스트" class="tbl_type">
+			<caption>사용자 리스트</caption>
+			<colgroup>
+			<col width="12%"><col><col width="12%" span="6">
+			</colgroup>
+			<thead>
+			<tr>
+				<th scope="col"><input type="checkbox" /></th>
+				<th scope="col">아이디</th>
+				<th scope="col">이름</th>
+				<th scope="col">이메일</th>
+				<th scope="col">성별</th>
+				<th scope="col">가입일</th>
+			</tr>
+			</thead>
+			<tbody data-bind="foreach: data">
+			<tr>
+				<td><input type="checkbox" /></td>
+				<td data-bind="text: ID"></td>
+				<td data-bind="text: FIRSTNAME+LASTNAME"></td>
+				<td data-bind='text: EMAILFIRST+"@"+EMAILLAST'></td>
+				<td data-bind="text: SEX"></td>
+				<td data-bind="text: CREATEDATE"></td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+	<div style="width:100%; align:center">
+		<div style="margin:0 auto" id="pagenation"></div>
+	</div>
+	<div style="text-align:right">
+		<a href="#" class="button white">등록</a>
+		<a href="#" class="button white">삭제</a>
+		<a href="#" class="button white">이전페이지</a>
+	</div>
+	<div class="success_box">
+		Alert Text
+	</div>
+	
+	<div class="attention_box">
+		Alert Text
+	</div>
+
+	<div class="error_box">
+		Alert Text
+	</div>
+</div>
 		
 		
 		<div class="clear padding20"></div>

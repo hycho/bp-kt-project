@@ -70,22 +70,6 @@ public interface UserManageService {
 	public int deleteUser(Map<String, Object> params) throws Exception;
 	
 	/**
-	 * 유저의 패스워드를 변경한다.
-	 * @param params
-	 * @return
-	 * @throws Exception
-	 */
-	public int updatePassword(Map<String, Object> params) throws Exception;
-	
-	/**
-	 * 유저의 패스워드 정보를 알아온다.
-	 * @param params
-	 * @return
-	 * @throws Exception
-	 */
-	public List<Map<String, Object>> selectPassword(Map<String, Object> params) throws Exception;
-	
-	/**
 	 * 중복된 유저의 ID가 있는지 확인 한다.
 	 * @param params
 	 * @return

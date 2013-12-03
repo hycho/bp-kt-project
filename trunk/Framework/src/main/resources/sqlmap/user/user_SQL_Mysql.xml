@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD iBatis Mapper 3.0 //EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="userManageDao">
+	<select id="selectUserList" parameterType="java.util.Map"	resultType="java.util.HashMap">
+		SELECT * FROM(
+			SELECT * FROM TB_USER
+		) A
+		WHERE 1=1
+		<if test="ID != null and ID != ''">
+			and ID LIKE #{ID}
+		</if>
+		ORDER BY CREATEDATE DESC
+		LIMIT #{recordCountPerPage} OFFSET #{pageIndex}
+	</select>
+
+	<select id="selectUserListTotCnt" parameterType="java.util.Map" resultType="int">
+		SELECT COUNT(*) totcnt
+		FROM(
+			SELECT ID
+			FROM TB_USER
+		) A
+		WHERE 1=1
+		<if test="ID != null and ID != ''">
+			and ID LIKE #{ID}
+		</if>
+	</select>
+
+	<insert id="insertUser" parameterType="java.util.Map">
+	  <![CDATA[
+	 		INSERT INTO TB_USER (
+	 			ID,
+	 			FIRSTNAME,
+	 			LASTNAME,
+	 			PASSWORD,
+	 			BIRTHYEAR,
+	 			BIRTHMONTH,
+	 			BIRTHDAY,
+	 			SEX,
+	 			EMAILFIRST,
+	 			EMAILLAST,
+	 			CONTRYCODE,
+	 			CRAETEDATE
+	 		) 
+	 		VALUES (
+	 				#{ID},
+	 				#{FIRSTNAME},
+	 				#{LASTNAME},
+	 				#{PASSWORD},
+	 				#{BIRTHYEAR},
+	 				#{BIRTHMONTH},
+	 				#{BIRTHDAY},
+	 				#{SEX},
+	 				#{EMAILFIRST},
+	 				#{EMAILLAST},
+	 				#{CONTRYCODE},
+	 				now()
+	 		)
+	     ]]>
+	</insert>
+
+	<delete id="deleteUser" parameterType="java.util.Map">
+	  <![CDATA[
+	      DELETE FROM TB_USER 
+	      WHERE ID = #{ID}
+        ]]>
+	</delete>
+
+	<select id="selectUser" parameterType="java.util.Map" resultType="java.util.HashMap">
+	  <![CDATA[
+	  	SELECT * FROM TB_USER
+	    WHERE ID=#{ID}
+        ]]>
+	</select>
+
+	<update id="updateUser" parameterType="java.util.Map">
+	  <![CDATA[
+	    UPDATE TB_USER 
+	    SET FIRSTNAME=#{FIRSTNAME},
+	 				LASTNAME=#{LASTNAME},
+	 				PASSWORD=#{PASSWORD},
+	 				BIRTHYEAR=#{BIRTHYEAR},
+	 				BIRTHMONTH=#{BIRTHMONTH},
+	 				BIRTHDAY=#{BIRTHDAY},
+	 				SEX=#{SEX},
+	 				EMAILFIRST=#{EMAILFIRST},
+	 				EMAILLAST=#{EMAILLAST},
+	 				CONTRYCODE=#{CONTRYCODE}
+	    WHERE ID=#{ID}
+        ]]>
+	</update>
+	
+	<select id="chkUserId" parameterType="java.util.Map"	resultType="int">
+	  <![CDATA[
+	      SELECT COUNT(1)
+	      FROM TB_USER
+	      WHERE ID=#{ID}
+        ]]>
+	</select>
+</mapper>
