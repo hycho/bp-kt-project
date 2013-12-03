@@ -12,6 +12,8 @@
 	<script type="text/javascript" src="<c:url value='/resources/js/all-in-one-min.js'/>"></script>
 	<script type="text/javascript" src="<c:url value='/resources/js/setup.js'/>"></script>
 	<script type="text/javascript" src="<c:url value='/resources/js/jquery.paginate.js'/>"></script>
+	<script type="text/javascript" src="<c:url value='/resources/js/moment.min.js'/>"></script>
+	
 	<script type="text/javascript">
 	var RECORDCOUNTPERPAGE = 10;
 	
@@ -96,7 +98,12 @@
 		<table cellspacing="0" border="1" summary="사용자 리스트" class="tbl_type">
 			<caption>사용자 리스트</caption>
 			<colgroup>
-			<col width="12%"><col><col width="12%" span="6">
+			<col width="10%">
+			<col width="30%">
+			<col width="10%">
+			<col width="10%">
+			<col width="10%">
+			<col width="30%">
 			</colgroup>
 			<thead>
 			<tr>
@@ -115,7 +122,8 @@
 				<td data-bind="text: FIRSTNAME+LASTNAME"></td>
 				<td data-bind='text: EMAILFIRST+"@"+EMAILLAST'></td>
 				<td data-bind="text: SEX"></td>
-				<td data-bind="text: CREATEDATE"></td>
+				<td data-bind="text: moment(CREATEDATE).format('MMMM Do YYYY, h:mm:ss a')"></td>
+				
 			</tr>
 			</tbody>
 		</table>
