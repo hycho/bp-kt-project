@@ -16,4 +16,5 @@
 	<import resource="datasource-context.xml" />
 	<import resource="schedule-context.xml" />
 	<import resource="logging-context.xml" />
+	<import resource="security-context.xml" />
 </beans>

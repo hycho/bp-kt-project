@@ -40,7 +40,7 @@
 	 			EMAILFIRST,
 	 			EMAILLAST,
 	 			CONTRYCODE,
-	 			CRAETEDATE
+	 			CREATEDATE
 	 		) 
 	 		VALUES (
 	 				#{ID},

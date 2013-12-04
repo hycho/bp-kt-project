@@ -3,7 +3,7 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <html>
 <head>
-  <title>사용자 리스트</title>
+  <title>사용자 리스트 페이지</title>
   <link rel="stylesheet" href="<c:url value='/resources/css/style.css'/>" type="text/css" />
   <link rel="stylesheet" href="<c:url value='/resources/css/pagination.css'/>" type="text/css" />
 	<script type="text/javascript" src="<c:url value='/resources/js/jquery.min.js'/>"></script>
@@ -50,6 +50,15 @@
 		        });
 			};
 			
+			self.keySearch= function (data, event) {
+				if (event.which == 13) {
+					self.search();
+			     }
+				return true;
+			};
+			
+			
+			
 			function setPaginate(pageElemId ,pCount, pStart, pDisplay, func){
 				$("#"+pageElemId).paginate({
 					count: Math.ceil(pCount),
@@ -90,9 +99,10 @@
 	<div data-bind="with: userListData" id="code_origin" class="code_tmpl">
 		<p>
 			<select data-bind="value: $root.searchType">
-			  <option value="userId">아이디</option>
+			  <option value="ID">아이디</option>
 	    </select>
-			<input data-bind="value: $root.searchValue" class="inputText" type="text" id="name" name="name" />
+			<input data-bind="value: $root.searchValue, valueUpdate: 'afterkeydown',event:{keypress: $root.keySearch}" class="inputText" type="text" id="name" name="name" />
+			<a data-bind="click: $root.search" href="#" style="margin-bottom:0px" class="button white">검색</a>
 		</p>	
 		
 		<table cellspacing="0" border="1" summary="사용자 리스트" class="tbl_type">
@@ -121,9 +131,8 @@
 				<td data-bind="text: ID"></td>
 				<td data-bind="text: FIRSTNAME+LASTNAME"></td>
 				<td data-bind='text: EMAILFIRST+"@"+EMAILLAST'></td>
-				<td data-bind="text: SEX"></td>
+				<td data-bind="text: SEX == 0?'남' : '여'"></td>
 				<td data-bind="text: moment(CREATEDATE).format('MMMM Do YYYY, h:mm:ss a')"></td>
-				
 			</tr>
 			</tbody>
 		</table>
@@ -132,128 +141,12 @@
 		<div style="margin:0 auto" id="pagenation"></div>
 	</div>
 	<div style="text-align:right">
-		<a href="#" class="button white">등록</a>
+		<a href="<c:url value='/manager/user/userInsertView'/>" class="button white">등록</a>
 		<a href="#" class="button white">삭제</a>
 		<a href="#" class="button white">이전페이지</a>
 	</div>
-	<div class="success_box">
-		Alert Text
-	</div>
-	
-	<div class="attention_box">
-		Alert Text
-	</div>
-
-	<div class="error_box">
-		Alert Text
-	</div>
 </div>
-		
-		
-		<div class="clear padding20"></div>
-
-		<div class="col_1_2">
-			
-				<div class="tabs">
-					<ul>
-						<li><a href="#tabs-0">Lorem</a></li>
-						<li><a href="#tabs-1">Ipsum</a></li>
-						<li><a href="#tabs-2">Dolor</a></li>
-					</ul>
-					<div class="clear"></div>
-					<div class="bordered_box">
-						<div id="tabs-0" >
-							<div class="content_text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
-						</div>
-						<div id="tabs-1">
-							<div class="content_text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
-						</div>
-						<div id="tabs-2">
-							<div class="content_text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
-						</div>
-					</div>
-				</div>
-		</div>
-		
-		
-		
-		<div class="col_1_2 last">
-			<div class="toogle_box">
-				<div class="toggle opened_toggle">
-					<div class="icon"></div>
-					Toggle
-				</div>
-				<div class="toggle_container">
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                      </p> <p> 
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-					</p>
-				</div>
-			</div>
-			
-			
-			
-		</div>
-		
-		<div class="clear padding30"></div>
-
-		
-		
-		<h1>Buttons</h1>
-		
-		
-		<div class="clear padding20"></div>
-		
-		<div >
-			<a href="#" class="button white">Button</a>
-			<a href="#" class="button grey">Button</a>
-      <a href="#" class="button red">Button</a>
-      <a href="#" class="button orange">Button</a>
-      <a href="#" class="button green">Button</a>
-      <a href="#" class="button teal">Button</a>
-      <a href="#" class="button blue">Button</a>
-			<a href="#" class="button navy">Button</a>
-
-
-		</div>
-		
-		
-		<div class="clear padding30"></div>
-
-	
-	</section>
-    <!-- END CONTENT -->
-    <!-- footer -->
-    <footer class="footer_bg_bottom clearfix">
-		<div class="footer_bottom container">
-			<div class="col_2_3">
-				
-				<div class="menu">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-            <li><a href="elements.html">Elements</a></li>
-						<li><a href="portfolio_4_cols.html">Portfolio</a></li>
-						<li><a href="pricing_5_cols.html">Pricing</a></li>
-						<li><a href="blog.html">Blog</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
-				</div>
-				
-				
-				<div class="clear padding20"></div>
-				
-				
-				<p>
-					&copy; Some Rights Reserved. &nbsp; <a href="#">Legal Notices</a>  
-				</p>
-				
-			</div>
-			
-			<div class="clear padding20"></div>
-		</div>
-	</footer>
-    <!-- /footer -->
+</section>
+<!-- END CONTENT -->
 </body>
 </html>
