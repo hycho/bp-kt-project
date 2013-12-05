@@ -15,15 +15,12 @@ public class HomeController {
 	
   @RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home() {
-	  log.info("Welcome home!");
-	  
 	  Object principal =  SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-	  
 	  if(principal instanceof UserMapDetailsModel){
 		  UserMapDetailsModel data = (UserMapDetailsModel) principal;
 			System.out.println(data.getMapData());
 		}else{
-			System.out.println("Not Login");
+			log.info("Not Login");
 		}
 	  
 	  

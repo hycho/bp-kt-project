@@ -3,11 +3,28 @@
  
   <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
     <layout class="ch.qos.logback.classic.PatternLayout">
-      <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>
+    	<Pattern>%d{ABSOLUTE} %5p %t %c{2}:%L - %m%n</Pattern>
+      <!-- <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern> -->
+      <!-- <Pattern>%d{ABSOLUTE} %5p %t %c{2}:%L - %m%n"</Pattern> -->
+      
     </layout>
   </appender>
+  
+  <appender name="dailyRolling" class="ch.qos.logback.core.rolling.RollingFileAppender">
+  	<file>/hycho/log/currentLog.log</file>
+  	<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+    	<fileNamePattern>logFile.%d{yyyy-MM-dd}.log</fileNamePattern>
+    </rollingPolicy> 
+   	<encoder>
+    	<Pattern>%d{YYYY.MM.dd HH:mm:ss.SSS} %5p %t %c{2}:%L - %m%n</Pattern>
+    </encoder>
+	</appender>
  
   <root level="info">
     <appender-ref ref="STDOUT" />
+  </root>
+  
+  <root name="com.cframe.framework.components" level="info">
+    <appender-ref ref="dailyRolling" />
   </root>
 </configuration>
