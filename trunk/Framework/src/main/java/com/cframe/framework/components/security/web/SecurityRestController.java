@@ -15,9 +15,9 @@ import com.cframe.framework.components.user.service.UserManageService;
 import com.cframe.framework.core.util.CommonUtility;
 
 @Controller
-@RequestMapping("/rest/login")
-public class LoginRestController {
-	static final Logger log = LoggerFactory.getLogger(LoginRestController.class);
+@RequestMapping("/rest/security")
+public class SecurityRestController {
+	static final Logger log = LoggerFactory.getLogger(SecurityRestController.class);
 	
 	@Resource(name = "userManageService")
 	private UserManageService userManageService;

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="security"%>
 <html>
 <head>
 <link rel="shortcut icon" href="<c:url value='/resources/images/favicon.ico'/>" /> 
@@ -32,6 +33,16 @@ $(function() {
 	  	<li ><a href="javascript:"><img src="<c:url value='/resources/images/facebook.png' />" alt="Facebook"></a></li>
 	    <li ><a href="javascript:"><img src="<c:url value='/resources/images/twitter.png' />" width="24" height="24" alt="Twitter"></a></li>
 	  </ul>
+	  <div style="float:right;padding-top:18px;">
+	  	<security:authorize ifNotGranted="ROLE_ADMIN,ROLE_USER">  
+				<a href="<c:url value='/security/loginView' />" class="button white">Login</a>
+			</security:authorize>
+	  	<security:authorize ifAnyGranted="ROLE_ADMIN,ROLE_USER">
+	  			<span style="fi">Hi <security:authentication property="name"/></span>
+	  			
+	  		<a href="<c:url value='/j_spring_security_logout' />" class="button white">Logout</a>
+	  	</security:authorize>
+	  </div>
 		<!-- Logo -->
 		<div class="logo">
 			<a href="index.html"><img src="<c:url value='/resources/images/logo.png' />" alt="" /></a>

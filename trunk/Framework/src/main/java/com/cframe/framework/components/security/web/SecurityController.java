@@ -8,10 +8,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class LoginController {
-	static final Logger log = LoggerFactory.getLogger(LoginController.class);
+@RequestMapping("/security")
+public class SecurityController {
+	static final Logger log = LoggerFactory.getLogger(SecurityController.class);
 	
-  @RequestMapping(value = "/login")
+  @RequestMapping(value = "/loginView")
 	public String home() {
     return "components/login/login";
 	}
@@ -22,8 +23,8 @@ public class LoginController {
 	 * @return
 	 * @throws Exception
 	 */
-	@RequestMapping(value="/regist")
-	public String userInsertView(HttpServletRequest request)throws Exception {
-		return "components/userManager/insert";
-  }
+	@RequestMapping(value="/registView")
+	public String registUserView(HttpServletRequest request)throws Exception {
+		return "components/login/regist";
+	}
 }

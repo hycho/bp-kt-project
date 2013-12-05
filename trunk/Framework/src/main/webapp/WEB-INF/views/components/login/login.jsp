@@ -19,7 +19,7 @@
 		});
 		
 		$("#btnRegist").click(function(){
-			location.href = "/manager/user/userInsertView";
+			location.href = "/security/registView";
 		});
 	});
 	</script>

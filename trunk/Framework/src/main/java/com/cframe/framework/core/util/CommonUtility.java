@@ -87,6 +87,38 @@ public class CommonUtility {
 		}
 	}
 	
+	public static Map<String, Object> transMapToResultSet(ResultSet rs) throws Exception {
+		ResultSetMetaData rsmd = null;
+	  Collection<String> titles = new ArrayList<String>();
+	  Map<String, Object> m = new HashMap<String, Object>();
+	  
+	  try {
+		  rsmd = rs.getMetaData();
+	    for (int colIdx = 1; colIdx <= rsmd.getColumnCount(); colIdx++){
+	 			titles.add(rsmd.getColumnName(colIdx).toLowerCase());
+	    	}
+	    for (int colIdx = 1; colIdx <= rsmd.getColumnCount(); colIdx++){
+	    	if (rs.getObject(rsmd.getColumnName(colIdx)) instanceof Clob) {
+					StringBuffer output = new StringBuffer();
+					Reader input = rs.getCharacterStream(rsmd.getColumnName(colIdx));
+					char[] buffer = new char[1024];
+					int byteRead;
+					while ((byteRead = input.read(buffer, 0, 1024)) != -1) {
+						output.append(buffer, 0, byteRead);
+					}
+					input.close();
+					m.put(rsmd.getColumnName(colIdx).toLowerCase(), output.toString());
+				} else {
+					m.put(rsmd.getColumnName(colIdx).toLowerCase(), rs.getObject(rsmd.getColumnName(colIdx)));
+				}
+	    	}
+	    return m;
+		} catch (SQLException e) {
+			throw e;
+		} finally {
+		}
+	}
+	
 	/*
 	 *map (
 	 *		titles list (
