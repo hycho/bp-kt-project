@@ -80,6 +80,16 @@ $(function() {
 				</li>
 				<li><a href="blog.html">Blog</a></li>
 				<li><a href="contact.html">Contact</a></li>
+				<li><a>Analysis</a>
+					<ul>
+						<li>
+							<a href="">Service</a>
+							<ul>
+								<li><a href="<c:url value='/analysis/serviceView'/>">View</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
 				<li><a>관리</a>
 					<ul>
 						<li>

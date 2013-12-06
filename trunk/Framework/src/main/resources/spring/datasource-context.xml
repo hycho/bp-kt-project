@@ -12,11 +12,16 @@
 	<!-- JNDI DataSource for JEE environments -->
 	<bean id="jdbcDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">  
 	    <property name="jndiName" value="${jndi.name}" />  
+	</bean>
+	
+	<!-- JNDI Big PhoenixDataSource for JEE environments -->
+	<bean id="phoenixDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">  
+	    <property name="jndiName" value="${jndi.name}" />  
 	</bean>  
 
 	<!-- spring templates -->
 	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">  
-		<property name="dataSource" ref="jdbcDataSource" />
+		<property name="dataSource" ref="phoenixDataSource" />
 	</bean> 
 	
 	<!--**********************************************************************************************************************
