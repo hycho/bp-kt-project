@@ -1,1 +1,0 @@
-var SUCCESS_FLAG = 1;
