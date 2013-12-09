@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sitemesh>
+  <mime-type>text/html</mime-type>
+  <mapping path="/*" decorator="/WEB-INF/sitemesh/decorator/menu_decorator.jsp"/>
+</sitemesh>
