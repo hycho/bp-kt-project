@@ -17,7 +17,39 @@
 
 	<script type="text/javascript">
 	$(function () {
-	   $('#container1').highcharts({
+		var sexChart = new Highcharts.Chart({
+			chart: {
+					renderTo: 'container1',
+		     	plotBackgroundColor: null,
+		      plotBorderWidth: null,
+		      plotShadow: false
+		       	},
+		     title: {
+		     	text: 'Browser market shares at a specific website, 2010'
+		       	},
+		     tooltip: {
+		   		pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+		       	},
+		     plotOptions: {
+		       pie: {
+		         allowPointSelect: true,
+		         cursor: 'pointer',
+		         dataLabels: {
+		         	enabled: true,
+		           color: '#000000',
+		           connectorColor: '#000000',
+		           format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+		             		}
+		           	}
+		       	},
+		     series: [{
+		     	type: 'pie',
+		       name: 'Browser share'
+		       //data: [['Firefox',   45.0]]
+		        }]
+		});
+		
+		var idTop5Chart = $('#container2').highcharts({
 	   	chart: {
 	     	plotBackgroundColor: null,
 	       plotBorderWidth: null,
@@ -43,8 +75,8 @@
 	       	},
 	     series: [{
 	     	type: 'pie',
-	       name: 'Browser share',
-	       data: [
+	       name: 'Browser share'
+	       /*data: [
 	        	['Firefox',   45.0],
 	         	['IE',       26.8],
 	          			  		{
@@ -56,50 +88,7 @@
 	          ['Safari',    8.5],
 	          ['Opera',     6.2],
 	          ['Others',   0.7]
-	            ]
-	        }]
-	    });
-	
-	$('#container2').highcharts({
-	   	chart: {
-	     	plotBackgroundColor: null,
-	       plotBorderWidth: null,
-	       plotShadow: false
-	       	},
-	     title: {
-	     	text: 'Browser market shares at a specific website, 2010'
-	       	},
-	     tooltip: {
-	   		pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-	       	},
-	     plotOptions: {
-	       pie: {
-	         allowPointSelect: true,
-	         cursor: 'pointer',
-	         dataLabels: {
-	         	enabled: true,
-	           color: '#000000',
-	           connectorColor: '#000000',
-	           format: '<b>{point.name}</b>: {point.percentage:.1f} %'
-	             		}
-	           	}
-	       	},
-	     series: [{
-	     	type: 'pie',
-	       name: 'Browser share',
-	       data: [
-	        	['Firefox',   45.0],
-	         	['IE',       26.8],
-	          			  		{
-	              name: 'Chrome',
-	              y: 12.8,
-	              sliced: true,
-	              selected: true
-	          					},
-	          ['Safari',    8.5],
-	          ['Opera',     6.2],
-	          ['Others',   0.7]
-	            ]
+	            ]*/
 	        }]
 	    });
 	
@@ -145,6 +134,24 @@
 	            ]
 	        }]
 	    });
+	
+		
+		function init(){	
+			$.ajax("/rest/analysis/selectAnalysisSexForServiceList", {
+		    type: "post",
+	    	dataType: "json",
+	    	success: function(result){
+		    	var data = [];
+		    	$(result).each(function(idx, obj){
+		    		console.log(obj);
+		    		data.push([obj.SEXTYPE, obj.TOT]);
+		    		});
+		    	sexChart.series[0].setData(data);
+		     	}
+			});
+		}
+	
+		init();
 	});
 	</script>
 </head>
@@ -166,6 +173,7 @@
 		<div id="container3" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 	</div>
 	<div class="clear"></div>
+	<button id="sample1">test</button>
 </section>
 </body>
 </html>

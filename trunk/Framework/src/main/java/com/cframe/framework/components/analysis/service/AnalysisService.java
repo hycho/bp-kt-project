@@ -21,6 +21,6 @@ import java.util.Map;
  */
 public interface AnalysisService {
 	
-	public List<Map<String, Object>> selectUser(Map<String, Object> params) throws Exception;
+	public List<Map<String, Object>> selectAnalysisSexForServiceList(Map<String, Object> params) throws Exception;
 	
 }

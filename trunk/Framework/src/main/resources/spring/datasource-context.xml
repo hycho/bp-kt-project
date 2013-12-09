@@ -16,7 +16,7 @@
 	
 	<!-- JNDI Big PhoenixDataSource for JEE environments -->
 	<bean id="phoenixDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">  
-	    <property name="jndiName" value="${jndi.name}" />  
+	    <property name="jndiName" value="${jndi.phoenix.name}" />  
 	</bean>  
 
 	<!-- spring templates -->

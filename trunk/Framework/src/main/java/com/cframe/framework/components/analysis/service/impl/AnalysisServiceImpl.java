@@ -34,7 +34,7 @@ public class AnalysisServiceImpl implements AnalysisService {
 	private AnalysisDaoImpl analysisDao;
 
 	@Override
-	public List<Map<String, Object>> selectUser(Map<String, Object> params)
+	public List<Map<String, Object>> selectAnalysisSexForServiceList(Map<String, Object> params)
 			throws Exception {
 
 		return analysisDao.selectAnalysisSexForServiceMap(params);
