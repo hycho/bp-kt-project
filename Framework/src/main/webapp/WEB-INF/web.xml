@@ -51,6 +51,24 @@
   	<listener>
     	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   	</listener>
+
+<!-- Service Loader Listener hycho-->  	
+  	<listener>
+    	<listener-class>com.cframe.framework.core.listener.PackageClassRegisterListener</listener-class>
+  	</listener>
+  	<context-param>
+  		<param-name>packagePath</param-name>
+  		<param-value>/hycho/work/my/Framework/src/main/java/com/cframe/framework/components</param-value> 
+ 		</context-param>
+ 		<context-param>
+  		<param-name>packageLoaderJNDI</param-name>
+  		<param-value>java:comp/env/jdbc/myf</param-value> 
+ 		</context-param>
+ 		<context-param>
+  		<param-name>packageLoaderStart</param-name>
+  		<param-value>false</param-value> 
+ 		</context-param>
+<!-- Service Loader Listener hycho-->  		
   
   	<servlet>
 	    <servlet-name>appServlet</servlet-name>
